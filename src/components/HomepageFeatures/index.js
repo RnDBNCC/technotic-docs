@@ -1,5 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
+import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
 // const FeatureList = [
@@ -116,7 +117,7 @@ function Contributors({Svg, name, description}){
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <Svg className={styles.contributorsSvg} role="img" />
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{name}</h3>
@@ -128,20 +129,54 @@ function Contributors({Svg, name, description}){
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <h1 className="text--center">Contributors</h1>
-        {/* <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div> */}
-        <div className="row">
-          {ContributorsList.map((props, idx) => (
-            <Contributors key={idx} {...props} />
-          ))}
+    <div className={styles.homepage}>
+      <section className={styles.technotic}>
+          <div className="container">
+            <h1>What's Technotic?</h1>
+            <img src='@site/static/img/favicon.png'/>
+            <h2>Taken from several BNCC event names such as BNCC Techno Talk and BNCC Technoscape.</h2>
+            <p>Technotic means learning about technology and means to understand how computers work as well as identifying and utilizing computer components for further development in their approach towards users.</p>
+          </div>
+      </section>
+
+      <section>
+        <div className="container">
+          <div className={styles.card}>
+            <Link to="/docs/intro" className="button button--primary button--lg">
+              Let's Get Started!
+            </Link>
+
+            <Link to="/docs/intro" className="button button--primary button--lg">
+              Configuration
+            </Link>
+
+            <Link to="/docs/intro" className="button button--primary button--lg">
+              Deployment
+            </Link>
+
+            <Link to="/docs/intro" className="button button--primary button--lg">
+              Components
+            </Link>
+          </div>
+          
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className={styles.contributors}>
+        <div className="container">
+          <h1 className="text--center">Contributors</h1>
+          {/* <div className="row">
+            {FeatureList.map((props, idx) => (
+              <Feature key={idx} {...props} />
+            ))}
+          </div> */}
+          <div className="row">
+            {ContributorsList.map((props, idx) => (
+              <Contributors key={idx} {...props} />
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

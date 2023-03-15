@@ -77,7 +77,7 @@ const config = {
             label: 'Tutorial',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/RnDBNCC/technotic',
             label: 'GitHub',
             position: 'right',
           },
@@ -121,12 +121,15 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/RnDBNCC/technotic',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Bina Nusantara Computer Club, All Right Reserved.`,
+        copyright: 
+        `Copyright © ${new Date().getFullYear()} Bina Nusantara Computer Club, All Right Reserved. 
+        <br>
+        Create with ❤ by Research and Development BNCC`,
       },
       prism: {
         theme: lightCodeTheme,

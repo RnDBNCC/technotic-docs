@@ -1,11 +1,30 @@
-.features {
+.homepage {
+  padding-top: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  border-radius: 30px;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(186, 186, 186, 0.466);
+}
+
+.technotic {
+  text-align: center;
+}
+
+.contributors {
   display: flex;
   align-items: center;
   padding: 2rem 0;
   width: 100%;
 }
 
-.featureSvg {
+.contributorsSvg {
   height: 200px;
   width: 200px;
 }
