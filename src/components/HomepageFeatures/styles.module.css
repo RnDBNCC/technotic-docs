@@ -2,7 +2,7 @@
   padding-top: 2rem;
 }
 
-.card {
+.cardLayout {
   display: flex;
   flex-direction: row;
   padding: 20px;
@@ -11,6 +11,24 @@
   justify-content: center;
   align-items: center;
   background-color: rgba(186, 186, 186, 0.466);
+}
+
+.card{
+  padding: 30px;
+  background-color: #0E2767;
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: large;
+  transition: all 0.5s ease-in-out;
+}
+
+.card:hover{
+  background-color: #0e2767e2;
+  color: white;
+  text-decoration: none;
+  transform: scale(1.2);
+  border-radius: 50px;
 }
 
 .technotic {

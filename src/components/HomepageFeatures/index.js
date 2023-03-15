@@ -133,7 +133,7 @@ export default function HomepageFeatures() {
       <section className={styles.technotic}>
           <div className="container">
             <h1>What's Technotic?</h1>
-            <img src='@site/static/img/favicon.png'/>
+            <img src={require("@site/static/img/favicon.png")}/>
             <h2>Taken from several BNCC event names such as BNCC Techno Talk and BNCC Technoscape.</h2>
             <p>Technotic means learning about technology and means to understand how computers work as well as identifying and utilizing computer components for further development in their approach towards users.</p>
           </div>
@@ -141,20 +141,20 @@ export default function HomepageFeatures() {
 
       <section>
         <div className="container">
-          <div className={styles.card}>
-            <Link to="/docs/intro" className="button button--primary button--lg">
+          <div className={styles.cardLayout}>
+            <Link to="/docs/intro" className={styles.card}>
               Let's Get Started!
             </Link>
 
-            <Link to="/docs/Configuration" className="button button--primary button--lg">
+            <Link to="/docs/Configuration"className={styles.card}>
               Configuration
             </Link>
 
-            <Link to="/docs/Deployment" className="button button--primary button--lg">
+            <Link to="/docs/Deployment" className={styles.card}>
               Deployment
             </Link>
 
-            <Link to="/docs/intro" className="button button--primary button--lg">
+            <Link to="/docs/intro" className={styles.card}>
               Components
             </Link>
           </div>
