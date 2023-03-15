@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Technotic',
-  tagline: 'Technotic are cool',
+  tagline: '"Design smarter, not harder with Technotics powerful design system."',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
