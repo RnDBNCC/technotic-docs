@@ -35,10 +35,14 @@ import styles from './styles.module.css';
 //   },
 // ];
 
+const Technotic = [
+
+]
+
 const ContributorsList = [
   {
     name: 'Jonathan Christian',
-    Svg: require('@site/static/img/RnDManager-JonathanChristian.svg').default,
+    Svg: require('@site/static/img/JonathanChristian.svg').default,
     description: (
       <>
         Research and Development 34 Manager
@@ -47,7 +51,7 @@ const ContributorsList = [
   },
   {
     name: 'Joshua Jevon Irawan',
-    Svg: require('@site/static/img/RnDStaff-JoshuaJevonIrawan.svg').default,
+    Svg: require('@site/static/img/JoshuaJevonIrawan.svg').default,
     description: (
       <>
         Research and Development 34 Staff
@@ -56,7 +60,7 @@ const ContributorsList = [
   },
   {
     name: 'Rifian Fernando',
-    Svg: require('@site/static/img/RnDStaff-RifianFernando.svg').default,
+    Svg: require('@site/static/img/RifianFernando.svg').default,
     description: (
       <>
         Research and Development 34 Staff
@@ -65,28 +69,48 @@ const ContributorsList = [
   },
   {
     name: 'Defario Fitriano',
-    Svg: require('@site/static/img/RnDStaff-DefarioFitriano.svg').default,
+    Svg: require('@site/static/img/DefarioFitriano.svg').default,
     description: (
       <>
         Research and Development 34 Staff
       </>
     ),
   },
+  {
+    name: 'Christopher Nathanael Tessy',
+    Svg: require('@site/static/img/ChristopherNathanael.svg').default,
+    description: (
+      <>
+        FAVE 34 Manager
+      </>
+    ),
+  },
+  {
+    name: 'Randi Adiel Gianufian',
+    Svg: require('@site/static/img/RandiAdiel.svg').default,
+    description: (
+      <>
+        Chief Product Officer 31
+      </>
+    ),
+  },
 ];
 
-function Feature({Svg, title, description}) {
-  return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
-}
+// function Feature({Svg, title, description}) {
+//   return (
+//     <div className={clsx('col col--4')}>
+//       <div className="text--center">
+//         <Svg className={styles.featureSvg} role="img" />
+//       </div>
+//       <div className="text--center padding-horiz--md">
+//         <h3>{title}</h3>
+//         <p>{description}</p>
+//       </div>
+//     </div>
+//   );
+// }
+
+
 
 function Contributors({Svg, name, description}){
   return (
