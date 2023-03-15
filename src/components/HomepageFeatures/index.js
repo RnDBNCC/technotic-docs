@@ -154,7 +154,7 @@ export default function HomepageFeatures() {
               Deployment
             </Link>
 
-            <Link to="/docs/intro" className={styles.card}>
+            <Link to="/docs/Components/Button" className={styles.card}>
               Components
             </Link>
           </div>
