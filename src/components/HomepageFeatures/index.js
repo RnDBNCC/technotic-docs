@@ -146,11 +146,11 @@ export default function HomepageFeatures() {
               Let's Get Started!
             </Link>
 
-            <Link to="/docs/intro" className="button button--primary button--lg">
+            <Link to="/docs/Configuration" className="button button--primary button--lg">
               Configuration
             </Link>
 
-            <Link to="/docs/intro" className="button button--primary button--lg">
+            <Link to="/docs/Deployment" className="button button--primary button--lg">
               Deployment
             </Link>
 
