@@ -1,24 +1,183 @@
+---
+sidebar_position: 4
+---
+
 import { Input } from 'technotic';
 
-anjay bisa kluar ges
+
+An input text field is a specific type of text field used in web development to collect user input through a web form. It is a GUI element that allows users to enter and edit text, and is an essential component of web forms used for a variety of purposes such as user registration, login, contact forms, surveys, and more.
+
+## Default Text Field
+
+<Input.TextField/>
+
+To call technotic's text field:
+```
+<Input.TextField/>
+```
+
+## Text Field Customization
+
+### a. Size
+There are 3 sizes of text field : 
+- Small
 <Input.TextField
-    textLabel='Name'
-    textPlaceholder='Please Input Your Name'
-    inputSize='medium'
-    
+    inputSize={'small'}
 />
+```
+<Input.TextField
+    inputSize={'small'}
+/>
+```
+- Medium (default)
+<Input.TextField
+    inputSize={'medium'}
+/>
+```
+<Input.TextField
+    inputSize={'medium'}
+/>
+```
+- Large
+<Input.TextField
+    inputSize={'large'}
+/>
+```
+<Input.TextField
+    inputSize={'large'}
+/>
+```
+
+### b. Font Size
+The font size of the text in the field can be adjusted for readability. Our default font size is 20px
+<Input.TextField
+    fontSize={'25px'}
+/>
+<br/>
 
 ```
 <Input.TextField
-    textLabel='Name'
-    textPlaceholder='Please Input Your Name'
-    inputSize='medium'
+    fontSize={'25px'}
 />
 ```
-<button>
-    Submit
-</button>
 
+### c. Label & Placeholder Text
+Label and placeholder text can be customized according to what information should be entered in a text field.
+<Input.TextField
+    textLabel={'Name'}
+    textPlaceholder={'Please Input Your Name'}
+/>
+<br/>
 
-    
+```
+<Input.TextField
+    textLabel={'Name'}
+    textPlaceholder={'Please Input Your Name'}
+/>
+```
+
+### d. Border Radius
+Our default border radius is 15px, but you can modify it
+<Input.TextField
+    borderRadius={'30px'}
+/>
+<br/>
+
+```
+<Input.TextField
+    borderRadius={'30px'}
+/>
+```
+### e. Error Message and Validation
+- Validation rules can be set to ensure that the text entered in the field meets specific criteria.
+- Error messages can be displayed when the user enters invalid input to provide feedback and guidance.
+
+<Input.TextField
+    status={'error'}
+/> 
+<small styles='color:red'>Last Name can't be Empty</small>
+<br/>
+
+<Input.TextField
+    status={'success'}
+    value={'test'}
+/> 
+<br/>
+
+```
+function App() {
+
+  const [text, setText] = useState();
+  const [error,setError]=useState("")
+
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    if(typeof text == 'undefined'||text == ''){
+        setError("error");
+    }else{
+      setError("success");
+    }
+  }
+  return (
+    <form onSubmit={handleSubmit}>
+        <Input.TextField
+        status={error}
+        value = {text}
+        onChange={(e) => {setText(e.target.value)}}
+        /> 
+        {error&&typeof text == 'undefined'||text == ''? <small style={{color:"red"}}>Last Name can't be Empty</small>:""}
+        <br></br>
+        <button>
+          Submit
+        </button>
+    </form>
+  );
+}
+```
+
+### f. Text Field with Button
+Consists of a text input field for users to enter text and a button that performs an action based on the input provided in many styles.
+- Left Icon Button
+
+import search  from '/img/search.svg';
+
+<form> 
+    <Input.TextField
+        iconButton = {'search'}
+        backgroundButtonColor ={'#22539F'}
+    />
+</form> 
+
+<br/>
+
+- Right Icon Button
+
+<form> 
+    <Input.TextField
+        iconButton = {'search'}
+        backgroundButtonColor ={'#22539F'}
+    />
+</form>
+
+<br/>
+
+- Right Text Button
+
+<form> 
+    <Input.TextField
+        textButton = {'search'}
+        backgroundButtonColor = {'#22539F'}
+    />
+</form>
+
+<br/>
+
+```
+<form> 
+    <Input.TextField
+        textButton = {'search'}
+        backgroundButtonColor = {'#22539F'}
+    />
+</form>
+```
         

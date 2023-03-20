@@ -28,22 +28,31 @@ import styles from './styles.module.css';
 //     title: 'Powered by React',
 //     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
 //     description: (
-//       <>
-//         Extend or customize your website layout by reusing React. Docusaurus can
-//         be extended while reusing the same header and footer.
-//       </>
-//     ),
-//   },
-// ];
-
-const Technotic = [
-
-]
-
-const ContributorsList = [
-  {
-    name: 'Jonathan Christian',
-    Svg: require('@site/static/img/JonathanChristian.svg').default,
+  //       <>
+  //         Extend or customize your website layout by reusing React. Docusaurus can
+  //         be extended while reusing the same header and footer.
+  //       </>
+  //     ),
+  //   },
+  // ];
+  
+  const Technotic = [
+    
+  ]
+  
+  const ContributorsList = [
+    {
+      name: 'Randi Adiel Gianufian',
+      Svg: require('@site/static/img/RandiAdiel.svg').default,
+      description: (
+        <>
+          Chief Product Officer 31
+        </>
+      ),
+    },
+    {
+      name: 'Jonathan Christian',
+      Svg: require('@site/static/img/JonathanChristian.svg').default,
     description: (
       <>
         Research and Development 34 Manager
@@ -83,15 +92,6 @@ const ContributorsList = [
     description: (
       <>
         FAVE 34 Manager
-      </>
-    ),
-  },
-  {
-    name: 'Randi Adiel Gianufian',
-    Svg: require('@site/static/img/RandiAdiel.svg').default,
-    description: (
-      <>
-        Chief Product Officer 31
       </>
     ),
   },
