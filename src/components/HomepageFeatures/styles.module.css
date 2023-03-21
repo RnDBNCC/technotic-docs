@@ -35,6 +35,10 @@
   text-align: center;
 }
 
+.technotic img{
+  width: 20vw;
+}
+
 .contributors {
   display: flex;
   align-items: center;

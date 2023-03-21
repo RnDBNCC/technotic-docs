@@ -43,7 +43,7 @@ import styles from './styles.module.css';
   const ContributorsList = [
     {
       name: 'Randi Adiel Gianufian',
-      Svg: require('@site/static/img/RandiAdiel.svg').default,
+      Image: '/img/Contributors/RandiAdiel.png',
       description: (
         <>
           Chief Product Officer 31
@@ -52,7 +52,7 @@ import styles from './styles.module.css';
     },
     {
       name: 'Jonathan Christian',
-      Svg: require('@site/static/img/JonathanChristian.svg').default,
+      Image: '/img/Contributors/JonathanChristian.png',
     description: (
       <>
         Research and Development 34 Manager
@@ -61,7 +61,7 @@ import styles from './styles.module.css';
   },
   {
     name: 'Joshua Jevon Irawan',
-    Svg: require('@site/static/img/JoshuaJevonIrawan.svg').default,
+    Image: '/img/Contributors/JoshuaJevonIrawan.png',
     description: (
       <>
         Research and Development 34 Staff
@@ -70,7 +70,7 @@ import styles from './styles.module.css';
   },
   {
     name: 'Rifian Fernando',
-    Svg: require('@site/static/img/RifianFernando.svg').default,
+    Image: '/img/Contributors/RifianFernando.png',
     description: (
       <>
         Research and Development 34 Staff
@@ -79,7 +79,7 @@ import styles from './styles.module.css';
   },
   {
     name: 'Defario Fitriano',
-    Svg: require('@site/static/img/DefarioFitriano.svg').default,
+    Image: '/img/Contributors/DefarioFitriano.png',
     description: (
       <>
         Research and Development 34 Staff
@@ -88,7 +88,7 @@ import styles from './styles.module.css';
   },
   {
     name: 'Christopher Nathanael Tessy',
-    Svg: require('@site/static/img/ChristopherNathanael.svg').default,
+    Image: '/img/Contributors/ChristopherNathanael.png',
     description: (
       <>
         FAVE 34 Manager
@@ -113,11 +113,11 @@ import styles from './styles.module.css';
 
 
 
-function Contributors({Svg, name, description}){
+function Contributors({name, description, Image}){
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.contributorsSvg} role="img" />
+        <img src={Image} className={styles.contributorsSvg} alt='img' />
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{name}</h3>
@@ -133,7 +133,7 @@ export default function HomepageFeatures() {
       <section className={styles.technotic}>
           <div className="container">
             <h1>What's Technotic?</h1>
-            <img src={require("@site/static/img/favicon.png")}/>
+            <img src='./img/logo.svg' alt='logo' />
             <h2>Taken from several BNCC event names such as BNCC Techno Talk and BNCC Technoscape.</h2>
             <p>Technotic means learning about technology and means to understand how computers work as well as identifying and utilizing computer components for further development in their approach towards users.</p>
           </div>
