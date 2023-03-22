@@ -2,126 +2,53 @@ import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
-
-// const FeatureList = [
-//   {
-//     title: 'Easy to Use',
-//     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-//     description: (
-//       <>
-//         Docusaurus was designed from the ground up to be easily installed and
-//         used to get your website up and running quickly.
-//       </>
-//     ),
-//   },
-//   {
-//     title: 'Focus on What Matters',
-//     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-//     description: (
-//       <>
-//         Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-//         ahead and move your docs into the <code>docs</code> directory.
-//       </>
-//     ),
-//   },
-//   {
-//     title: 'Powered by React',
-//     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-//     description: (
-  //       <>
-  //         Extend or customize your website layout by reusing React. Docusaurus can
-  //         be extended while reusing the same header and footer.
-  //       </>
-  //     ),
-  //   },
-  // ];
+import Contributor from '../Contributors/index';
+import ContributorStyle from '../Contributors/styles.contributors.css';
   
-  const Technotic = [
-    
-  ]
-  
-  const ContributorsList = [
-    {
-      name: 'Randi Adiel Gianufian',
-      Image: '/img/Contributors/RandiAdiel.png',
-      description: (
-        <>
-          Chief Product Officer 31
-        </>
-      ),
-    },
-    {
-      name: 'Jonathan Christian',
-      Image: '/img/Contributors/JonathanChristian.png',
+
+const FeaturesList = [
+  {
+    image: '/img/docusaurus.png',
+    feature: 'Configuration',
     description: (
       <>
-        Research and Development 34 Manager
+        Lorem Ipsum
       </>
     ),
+    link: '/docs/Configuration'
   },
   {
-    name: 'Joshua Jevon Irawan',
-    Image: '/img/Contributors/JoshuaJevonIrawan.png',
+    image: '/img/docusaurus.png',
+    feature: 'Components',
     description: (
       <>
-        Research and Development 34 Staff
+        Lorem Ipsum
       </>
     ),
+    link: '/docs/Configuration'
   },
   {
-    name: 'Rifian Fernando',
-    Image: '/img/Contributors/RifianFernando.png',
+    image: '/img/docusaurus.png',
+    feature: 'Deployment',
     description: (
       <>
-        Research and Development 34 Staff
+        Lorem Ipsum
       </>
     ),
+    link: '/docs/Deployment'
   },
-  {
-    name: 'Defario Fitriano',
-    Image: '/img/Contributors/DefarioFitriano.png',
-    description: (
-      <>
-        Research and Development 34 Staff
-      </>
-    ),
-  },
-  {
-    name: 'Christopher Nathanael Tessy',
-    Image: '/img/Contributors/ChristopherNathanael.png',
-    description: (
-      <>
-        FAVE 34 Manager
-      </>
-    ),
-  },
-];
+]
 
-// function Feature({Svg, title, description}) {
-//   return (
-//     <div className={clsx('col col--4')}>
-//       <div className="text--center">
-//         <Svg className={styles.featureSvg} role="img" />
-//       </div>
-//       <div className="text--center padding-horiz--md">
-//         <h3>{title}</h3>
-//         <p>{description}</p>
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
-function Contributors({name, description, Image}){
-  return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <img src={Image} className={styles.contributorsSvg} alt='img' />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{name}</h3>
-        <p>{description}</p>
+function Features({image,feature,description,link}){
+  return(
+    <div className={styles.card_item}>
+      <div className={styles.card_inner}>
+        <img src={image} alt="img"/>
+        <div className={styles.featureName}>{feature}</div>
+        <div className={styles.description}>{description}</div>
+        <form action={link}>
+          <button type='submit' className={styles.card}>{feature}</button>
+        </form>
       </div>
     </div>
   );
@@ -140,40 +67,23 @@ export default function HomepageFeatures() {
       </section>
 
       <section>
-        <div className="container">
-          <div className={styles.cardLayout}>
-            <Link to="/docs/intro" className={styles.card}>
-              Let's Get Started!
-            </Link>
-
-            <Link to="/docs/Configuration"className={styles.card}>
-              Configuration
-            </Link>
-
-            <Link to="/docs/Deployment" className={styles.card}>
-              Deployment
-            </Link>
-
-            <Link to="/docs/Components/Button" className={styles.card}>
-              Components
-            </Link>
-          </div>
-          
+        <div className={styles.contributor_container}>
+          {/* <div className={styles.card_item}> */}
+            <h1 className="text--center">Features</h1>
+            <div className="row">
+              {FeaturesList.map((props, idx) => (
+                <Features key={idx} {...props} />
+              ))}
+            </div>
+          {/* </div> */}
         </div>
       </section>
 
       <section className={styles.contributors}>
         <div className="container">
           <h1 className="text--center">Contributors</h1>
-          {/* <div className="row">
-            {FeatureList.map((props, idx) => (
-              <Feature key={idx} {...props} />
-            ))}
-          </div> */}
           <div className="row">
-            {ContributorsList.map((props, idx) => (
-              <Contributors key={idx} {...props} />
-            ))}
+            <Contributor className={ContributorStyle}/>
           </div>
         </div>
       </section>
