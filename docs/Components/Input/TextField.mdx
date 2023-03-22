@@ -2,15 +2,16 @@
 sidebar_position: 4
 ---
 
-import { Input } from 'technotic';
+import { Input } from "technotic";
 
 An input text field is a specific type of text field used in web development to collect user input through a web form. It is a GUI element that allows users to enter and edit text, and is an essential component of web forms used for a variety of purposes such as user registration, login, contact forms, surveys, and more.
 
 ## Default Text Field
 
-<Input.TextField/>
+<Input.TextField />
 
 To call technotic's text field:
+
 ```
 import { Input } from 'technotic';
 
@@ -20,29 +21,30 @@ import { Input } from 'technotic';
 ## Text Field Customization
 
 ### Size
-There are 3 sizes of text field : 
+
+There are 3 sizes of text field :
+
 - Small
-<Input.TextField
-    inputSize={'small'}
-/>
+  <Input.TextField inputSize={"small"} />
+
 ```
 <Input.TextField
     inputSize={'small'}
 />
 ```
+
 - Medium (default)
-<Input.TextField
-    inputSize={'medium'}
-/>
+  <Input.TextField inputSize={"medium"} />
+
 ```
 <Input.TextField
     inputSize={'medium'}
 />
 ```
+
 - Large
-<Input.TextField
-    inputSize={'large'}
-/>
+  <Input.TextField inputSize={"large"} />
+
 ```
 <Input.TextField
     inputSize={'large'}
@@ -50,11 +52,11 @@ There are 3 sizes of text field :
 ```
 
 ### Font Size
+
 The font size of the text in the field can be adjusted for readability. Our default font size is 20px
-<Input.TextField
-    fontSize={'25px'}
-/>
-<br/>
+
+<Input.TextField fontSize={"25px"} />
+<br />
 
 ```
 <Input.TextField
@@ -63,12 +65,14 @@ The font size of the text in the field can be adjusted for readability. Our defa
 ```
 
 ### Label & Placeholder Text
+
 Label and placeholder text can be customized according to what information should be entered in a text field.
+
 <Input.TextField
-    textLabel={'Name'}
-    textPlaceholder={'Please Input Your Name'}
+  textLabel={"Name"}
+  textPlaceholder={"Please Input Your Name"}
 />
-<br/>
+<br />
 
 ```
 <Input.TextField
@@ -78,26 +82,28 @@ Label and placeholder text can be customized according to what information shoul
 ```
 
 ### Border Radius
+
 Our default border radius is 15px, but you can modify it
-<Input.TextField
-    borderRadius={'30px'}
-/>
-<br/>
+
+<Input.TextField borderRadius={"30px"} />
+<br />
 
 ```
 <Input.TextField
     borderRadius={'30px'}
 />
 ```
+
 ### Error Message and Validation
+
 - Validation rules can be set to ensure that the text entered in the field meets specific criteria.
 - Error messages can be displayed when the user enters invalid input to provide feedback and guidance.
 
-import TextFieldValidation from '@site/src/components/DemoComponents/TextFieldValidation'
+import TextFieldValidation from "@site/src/components/DemoComponents/TextFieldValidation";
 
-<TextFieldValidation/>
+<TextFieldValidation />
 
-<br/>
+<br />
 
 ```
 import React, { useState } from 'react'
@@ -121,7 +127,7 @@ function App() {
         status={error}
         value = {text}
         onChange={(e) => {setText(e.target.value)}}
-        /> 
+        />
         {error&&typeof text == 'undefined'||text == ''? <small style={{color:"red"}}>Last Name can't be Empty</small>:""}
         <br></br>
         <button>
@@ -133,50 +139,49 @@ function App() {
 ```
 
 ### Text Field with Button
+
 Consists of a text input field for users to enter text and a button that performs an action based on the input provided in many styles.
+
 - Left Icon Button
 
-import search from './img/search.png';
-import contact from './img/contact.png';
+import search from "./img/search.png";
+import contact from "./img/contact.png";
 
-<form> 
-    <Input.TextField
-        iconLeft = { contact }
-        backgroundButtonColor ={'#22539F'}
-    />
-</form> 
+<form>
+  <Input.TextField iconLeft={contact} backgroundButtonColor={"#22539F"} />
+</form>{" "}
 
-<br/>
+<br />
 
 ```
 import contact from './img/contact.png';
 
-<form> 
+<form>
     <Input.TextField
         iconLeft = { contact }
         backgroundButtonColor ={'#22539F'}
     />
-</form> 
+</form>
 ```
 
 - Right Icon Button
 
-<form> 
-    <Input.TextField
-        iconButton = {search}
-        backgroundButtonColor ={'#22539F'}
-        iconHeight={'20px'}
-    />
+<form>
+  <Input.TextField
+    iconButton={search}
+    backgroundButtonColor={"#22539F"}
+    iconHeight={"20px"}
+  />
 </form>
 
-<br/>
+<br />
 
 ```
 import search from './img/search.png';
 
-<form> 
+<form>
     <Input.TextField
-        iconButton = {search}
+        iconButton = { search }
         backgroundButtonColor ={'#22539F'}
         iconHeight={'20px'}
     />
@@ -185,17 +190,14 @@ import search from './img/search.png';
 
 - Right Text Button
 
-<form> 
-    <Input.TextField
-        textButton = {'search'}
-        backgroundButtonColor = {'#22539F'}
-    />
+<form>
+  <Input.TextField textButton={"search"} backgroundButtonColor={"#22539F"} />
 </form>
 
-<br/>
+<br />
 
 ```
-<form> 
+<form>
     <Input.TextField
         textButton = {'search'}
         backgroundButtonColor = {'#22539F'}
@@ -205,22 +207,22 @@ import search from './img/search.png';
 
 - Right Icon Button with Customized Border Radius
 
-<form> 
-    <Input.TextField
-        iconButton = {search}
-        backgroundButtonColor ={'#22539F'}
-        iconHeight={'20px'}
-        borderRadius = {'30px'}
-        borderRadiusButton = {'0px 28px 28px 0px'}
-    />
+<form>
+  <Input.TextField
+    iconButton={search}
+    backgroundButtonColor={"#22539F"}
+    iconHeight={"20px"}
+    borderRadius={"30px"}
+    borderRadiusButton={"0px 28px 28px 0px"}
+  />
 </form>
 
-<br/>
+<br />
 
 ```
 import search from './img/search.png';
 
-<form> 
+<form>
     <Input.TextField
         iconButton = {search}
         backgroundButtonColor ={'#22539F'}

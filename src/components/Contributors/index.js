@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react'
 
-const contributor = () => {
+const Contributors = () => {
 
     const [users, setUsers] = useState([]);
 
@@ -39,5 +39,5 @@ const contributor = () => {
     )
 }
 
-export default contributor;
+export default Contributors;
 
