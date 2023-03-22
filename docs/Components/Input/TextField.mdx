@@ -16,12 +16,14 @@ An input text field is a specific type of text field used in web development to 
 
 To call technotic's text field:
 ```
+import { Input } from 'technotic';
+
 <Input.TextField/>
 ```
 
 ## Text Field Customization
 
-### a. Size
+### Size
 There are 3 sizes of text field : 
 - Small
 <Input.TextField
@@ -51,7 +53,7 @@ There are 3 sizes of text field :
 />
 ```
 
-### b. Font Size
+### Font Size
 The font size of the text in the field can be adjusted for readability. Our default font size is 20px
 <Input.TextField
     fontSize={'25px'}
@@ -64,7 +66,7 @@ The font size of the text in the field can be adjusted for readability. Our defa
 />
 ```
 
-### c. Label & Placeholder Text
+### Label & Placeholder Text
 Label and placeholder text can be customized according to what information should be entered in a text field.
 <Input.TextField
     textLabel={'Name'}
@@ -79,7 +81,7 @@ Label and placeholder text can be customized according to what information shoul
 />
 ```
 
-### d. Border Radius
+### Border Radius
 Our default border radius is 15px, but you can modify it
 <Input.TextField
     borderRadius={'30px'}
@@ -91,23 +93,19 @@ Our default border radius is 15px, but you can modify it
     borderRadius={'30px'}
 />
 ```
-### e. Error Message and Validation
+### Error Message and Validation
 - Validation rules can be set to ensure that the text entered in the field meets specific criteria.
 - Error messages can be displayed when the user enters invalid input to provide feedback and guidance.
 
-<Input.TextField
-    status={'error'}
-/> 
-<small styles='color:red'>Last Name can't be Empty</small>
-<br/>
+import TextFieldValidation from '@site/src/components/DemoComponents/TextFieldValidation'
 
-<Input.TextField
-    status={'success'}
-    value={'test'}
-/> 
+<TextFieldValidation/>
+
 <br/>
 
 ```
+import React, { useState } from 'react'
+
 function App() {
 
   const [text, setText] = useState();
@@ -138,31 +136,56 @@ function App() {
 }
 ```
 
-### f. Text Field with Button
+### Text Field with Button
 Consists of a text input field for users to enter text and a button that performs an action based on the input provided in many styles.
 - Left Icon Button
 
-import search  from '/img/search.svg';
+import search from './img/search.png';
+import contact from './img/contact.png';
 
 <form> 
     <Input.TextField
-        iconButton = {'search'}
+        iconLeft = { contact }
         backgroundButtonColor ={'#22539F'}
     />
 </form> 
 
 <br/>
 
+```
+import contact from './img/contact.png';
+
+<form> 
+    <Input.TextField
+        iconLeft = { contact }
+        backgroundButtonColor ={'#22539F'}
+    />
+</form> 
+```
+
 - Right Icon Button
 
 <form> 
     <Input.TextField
-        iconButton = {'search'}
+        iconButton = {search}
         backgroundButtonColor ={'#22539F'}
+        iconHeight={'20px'}
     />
 </form>
 
 <br/>
+
+```
+import search from './img/search.png';
+
+<form> 
+    <Input.TextField
+        iconButton = {search}
+        backgroundButtonColor ={'#22539F'}
+        iconHeight={'20px'}
+    />
+</form>
+```
 
 - Right Text Button
 
@@ -184,4 +207,30 @@ import search  from '/img/search.svg';
 </form>
 ```
 
-        
+- Right Icon Button with Customized Border Radius
+
+<form> 
+    <Input.TextField
+        iconButton = {search}
+        backgroundButtonColor ={'#22539F'}
+        iconHeight={'20px'}
+        borderRadius = {'30px'}
+        borderRadiusButton = {'0px 28px 28px 0px'}
+    />
+</form>
+
+<br/>
+
+```
+import search from './img/search.png';
+
+<form> 
+    <Input.TextField
+        iconButton = {search}
+        backgroundButtonColor ={'#22539F'}
+        iconHeight={'20px'}
+        borderRadius = {'30px'}
+        borderRadiusButton = {'0px 28px 28px 0px'}
+    />
+</form>
+```
