@@ -1,12 +1,9 @@
 .contributor-container {
-	padding: 40px 20px 20px 20px;
-	width: 99%;
-	margin: auto;
-	flex-wrap: wrap;
+	margin-top: 64px;
 	display: flex;
-	justify-content: space-between;
 	justify-content: center;
 	flex-wrap: wrap;
+	gap: 70px;
 }
 
 .card_item {

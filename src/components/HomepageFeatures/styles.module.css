@@ -51,7 +51,7 @@
 .card_item {
 	padding: 5px 30px;
 	width: 24%;
-  margin: auto;
+  	margin: auto;
 	text-align: center;
 }
 
@@ -69,7 +69,7 @@
 	min-height: 315px;
 	max-height: 370px;
 	width: 100%;
-  gap: 20px;
+  	gap: 20px;
 	box-shadow: 5px 5px 10px 2px rgba(95, 95, 95, 0.24);
 }
 
