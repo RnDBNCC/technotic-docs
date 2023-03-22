@@ -40,21 +40,12 @@
   width: 200px;
 }
 
-
-
-
-
-/* ============= */
 .contributor_container {
 	padding: 40px 20px 20px 20px;
 	width: 99%;
-	/* margin: auto; */
 	flex-wrap: wrap;
-	/* display: flex; */
-  /* flex-direction: column; */
 	justify-content: space-between;
-	/* justify-content: center; */
-  align-items: center;
+ 	align-items: center;
 }
 
 .card_item {

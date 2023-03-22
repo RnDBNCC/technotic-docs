@@ -1,6 +1,4 @@
 import React from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 import Contributor from '../Contributors/index';
 import ContributorStyle from '../Contributors/styles.contributors.css';
@@ -68,14 +66,12 @@ export default function HomepageFeatures() {
 
       <section>
         <div className={styles.contributor_container}>
-          {/* <div className={styles.card_item}> */}
             <h1 className="text--center">Features</h1>
             <div className="row">
               {FeaturesList.map((props, idx) => (
                 <Features key={idx} {...props} />
               ))}
             </div>
-          {/* </div> */}
         </div>
       </section>
 
