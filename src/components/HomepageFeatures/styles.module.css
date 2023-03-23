@@ -3,17 +3,19 @@
 }
 
 .card{
-  padding: 30px;
-  background-color: #0E2767;
-  color: white;
-  border-radius: 30px;
-  font-weight: bold;
-  font-size: large;
-  transition: all 0.5s ease-in-out;
+	margin-top: 16px;
+	border: none;
+	padding: 12px 24px;
+	background-color: #22539F;
+	color: white;
+	border-radius: 12px;
+	font-weight: 600;
+	font-size: 16px;
+	transition: all 0.5s ease-in-out;
 }
 
 .card:hover{
-  background-color: #0E2767;
+  background-color: #184088;
   color: white;
   text-decoration: none;
   transform: scale(1.1);
@@ -51,7 +53,7 @@
 .card_item {
 	padding: 5px 30px;
 	width: 24%;
-  margin: auto;
+  	margin: auto;
 	text-align: center;
 }
 
@@ -62,14 +64,14 @@
 }
 
 .contributor_container .card_inner {
-	background: linear-gradient(#0E2767,#00AEEF);
+	background: linear-gradient(#22539F,#5183C5);
 	border-radius: 10px;
 	padding: 35px 20px;
 	min-width: 225px;
 	min-height: 315px;
 	max-height: 370px;
 	width: 100%;
-  gap: 20px;
+  	gap: 20px;
 	box-shadow: 5px 5px 10px 2px rgba(95, 95, 95, 0.24);
 }
 
