@@ -64,9 +64,9 @@ export default function HomepageFeatures() {
       </section>
 
       <section>
-        <div className={styles.contributor_container}>
+        <div className={styles.feature_container}>
             <h1 className="text--center">Features</h1>
-            <div className="row">
+            <div className={styles.feature_item}>
               {FeaturesList.map((props, idx) => (
                 <Features key={idx} {...props} />
               ))}

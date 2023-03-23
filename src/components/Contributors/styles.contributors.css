@@ -95,6 +95,16 @@
 	}
 }
 
+@media screen and (max-width: 400px) {
+	.container .card_item {
+		padding: 5px 0px;
+	}
+
+	.contributor-container {
+		margin-top: 32px;
+	}
+}
+
 @media screen and (max-width: 320px) {
 	.container .card_item {
 		width: 100%;

@@ -33,7 +33,7 @@
 .contributors {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 0 24px 100px 24px;
   width: 100%;
 }
 
@@ -42,31 +42,33 @@
   width: 200px;
 }
 
-.contributor_container {
-	padding: 40px 20px 20px 20px;
-	width: 99%;
+.feature_container {
+	padding: 100px 24px;
+}
+
+.feature_item {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
 	flex-wrap: wrap;
-	justify-content: space-between;
- 	align-items: center;
 }
 
 .card_item {
+	margin-top: 64px;
 	padding: 5px 30px;
-	width: 24%;
-  	margin: auto;
 	text-align: center;
 }
 
-.contributor_container .card_item:hover {
+.feature_container .card_item:hover {
 	transform: scale(1.02);
 	transition: transform .3s;
 	cursor: pointer;
 }
 
-.contributor_container .card_inner {
+.feature_container .card_inner {
 	background: linear-gradient(#22539F,#5183C5);
 	border-radius: 10px;
-	padding: 35px 20px;
+	padding: 35px 75px;
 	min-width: 225px;
 	min-height: 315px;
 	max-height: 370px;
@@ -75,7 +77,7 @@
 	box-shadow: 5px 5px 10px 2px rgba(95, 95, 95, 0.24);
 }
 
-.contributor_container .card_item img {
+.feature_container .card_item img {
 	width: 120px;
 	height: 120px;
 	margin-bottom: 10px;
@@ -84,7 +86,7 @@
 	transition: transform .2s;
 }
 
-.contributor_container .card_item .featureName {
+.feature_container .card_item .featureName {
 	color: #ffffff;
 	font-weight: 600;
 	font-size: 25px;
@@ -93,7 +95,7 @@
 	text-overflow: ellipsis;
 }
 
-.contributor_container .card_item .description {
+.feature_container .card_item .description {
 	font-size: 17px;
 	font-weight: 100;
 	margin: 5px 0 10px;
@@ -117,32 +119,32 @@
     text-decoration: none;
 }
 
-@media screen and (max-width: 1024px) {
-	.container .card_item {
-		width: 33%;
-		display: block;
-	}
-}
-
 @media screen and (max-width: 768px) {
-	.container .card_item {
-		width: 50%;
-	}
 	.wrapper .header {
 		font-size: 16px;
 		height: 50px;
 	}
 }
 
-@media screen and (max-width: 568px) {
-	.container .card_item {
-		width: 80%;
-		margin: auto;
+@media screen and (max-width: 375px) {
+	.card_item {
+		margin-top: 32px;
+		padding: 5px 10px;
 	}
-}
 
-@media screen and (max-width: 320px) {
-	.container .card_item {
-		width: 100%;
+	.feature_container {
+		padding: 48px 24px;
+	  }
+
+	.feature_container .card_item .featureName {
+		font-size: 20px;
 	}
+	
+	.feature_container .card_item .description {
+		font-size: 14px;
+	}
+
+	.contributors {
+		padding: 0 24px 64px 24px;
+	  }
 }
