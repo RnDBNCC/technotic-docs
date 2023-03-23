@@ -22,7 +22,7 @@ const FeaturesList = [
         Take your UI to the next level <br/> with our versatile range of components 
       </>
     ),
-    link: '/docs/Configuration'
+    link: '/docs/Components/Button'
   },
   {
     image: '/img/docusaurus.png',
