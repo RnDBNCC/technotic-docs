@@ -26,7 +26,7 @@ const Contributors = () => {
                                 <div className="card_inner">
                                     <img src={elem.avatar_url} alt="" />
                                     <div className="userName">{elem.login}</div>
-                                    <div className="userUrl">{elem.url}</div>
+                                    <div className="userUrl">{elem.html_url}</div>
                                     <form action={(elem.html_url)}>
                                         <button type='submit' className="viewProfile">View Profile</button>
                                     </form>
