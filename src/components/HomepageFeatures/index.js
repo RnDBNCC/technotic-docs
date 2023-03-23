@@ -9,7 +9,7 @@ const FeaturesList = [
     feature: 'Configuration',
     description: (
       <>
-        Lorem Ipsum
+        Elevate your design system with Technotic. <br/> Ready to configure it to perfection?
       </>
     ),
     link: '/docs/Configuration'
@@ -19,7 +19,7 @@ const FeaturesList = [
     feature: 'Components',
     description: (
       <>
-        Lorem Ipsum
+        Take your UI to the next level <br/> with our versatile range of components 
       </>
     ),
     link: '/docs/Configuration'
@@ -29,7 +29,7 @@ const FeaturesList = [
     feature: 'Deployment',
     description: (
       <>
-        Lorem Ipsum
+        Maximize your components' potential <br/> ~ deploy with ease
       </>
     ),
     link: '/docs/Deployment'
