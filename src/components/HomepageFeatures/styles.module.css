@@ -134,7 +134,11 @@
 
 	.feature_container {
 		padding: 48px 24px;
-	  }
+	}
+
+	.feature_container .card_inner {
+		padding: 35px 25px;	
+	}
 
 	.feature_container .card_item .featureName {
 		font-size: 20px;
