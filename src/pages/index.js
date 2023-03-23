@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="Design smarter, not harder with Technotics powerful design system">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
