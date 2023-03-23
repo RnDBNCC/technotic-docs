@@ -12,7 +12,7 @@ const FeaturesList = [
         Elevate your design system with Technotic. <br/> Ready to configure it to perfection?
       </>
     ),
-    link: '/docs/Configuration'
+    link: '/docs/configuration'
   },
   {
     image: '/img/docusaurus.png',
@@ -22,7 +22,7 @@ const FeaturesList = [
         Take your UI to the next level <br/> with our versatile range of components 
       </>
     ),
-    link: '/docs/Components/Button'
+    link: '/docs/components/button'
   },
   {
     image: '/img/docusaurus.png',
@@ -32,7 +32,7 @@ const FeaturesList = [
         Maximize your components' potential <br/> ~ deploy with ease
       </>
     ),
-    link: '/docs/Deployment'
+    link: '/docs/deployment'
   },
 ]
 
