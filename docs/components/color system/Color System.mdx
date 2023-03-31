@@ -1,0 +1,366 @@
+import { ColorSystem } from 'technotic';
+
+Color System is a set of colors that represents a specific visual spectrum. Technotic also have a color system where it will be used for the color standardization of BNCC's Website.
+
+## Default Color Pallete
+
+<div style={{display:"flex", flexDirection:"column", gap:"32px"}}>
+    <div style={{display:"flex", justifyContent:"space-between",alignItems:"flex-start"}}>
+        <div>BNCC</div>
+        <div style={{display:"grid", gridTemplateColumns:"auto auto auto auto auto", gap:"32px"}}>
+            <div onclick="copyColor()" data-value="#D2E8FA">
+                <div style={{backgroundColor:"#D2E8FA", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>100</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#D2E8FA</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#A8CFF5", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>200</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#A8CFF5</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#77A9E2", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>300</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#77A9E2</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#5183C5", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>400</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#5183C5</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#22539F", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>500</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#22539F</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#184088", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>600</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#184088</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#112F72", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>700</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#112F72</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#0A215C", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>800</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#0A215C</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#06164C", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>900</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#06164C</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style={{display:"flex", justifyContent:"space-between",alignItems:"flex-start"}}>
+        <div>SUCCESS</div>
+        <div style={{display:"grid", gridTemplateColumns:"auto auto auto auto auto", gap:"32px"}}>
+            <div>
+                <div style={{backgroundColor:"#E6FBE4", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>100</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#E6FBE4</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#CAF8CA", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>200</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#CAF8CA</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#A9EBAF", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>300</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#A9EBAF</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#8CD79A", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>400</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#8CD79A</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#65BD7E", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>500</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#65BD7E</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#49A26B", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>600</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#49A26B</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#32885B", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>700</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#32885B</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#206D4C", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>800</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#206D4C</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#135A43", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>900</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#135A43</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style={{display:"flex", justifyContent:"space-between",alignItems:"flex-start"}}>
+        <div>ERROR</div>
+        <div style={{display:"grid", gridTemplateColumns:"auto auto auto auto auto", gap:"32px"}}>
+            <div>
+                <div style={{backgroundColor:"#FDE8DA", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>100</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#FDE8DA</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#FCCBB6", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>200</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#FCCBB6</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#F7A690", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>300</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#F7A690</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#F08372", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>400</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#F08372</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#E74E46", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>500</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#E74E46</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#C63338", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>600</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#C63338</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#A62332", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>700</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#A62332</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#85162C", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>800</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#85162C</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#6E0D29", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>900</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#6E0D29</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style={{display:"flex", justifyContent:"space-between",alignItems:"flex-start"}}>
+        <div>WARNING</div>
+        <div style={{display:"grid", gridTemplateColumns:"auto auto auto auto auto", gap:"32px"}}>
+            <div>
+                <div style={{backgroundColor:"#FEF4CB", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>100</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#FEF4CB</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#FDE699", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>200</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#FDE699</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#FAD365", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>300</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#FAD365</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#F5BF3F", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>400</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#F5BF3F</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#EFA103", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>500</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#EFA103</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#CD8302", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>600</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#CD8302</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#AC6801", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>700</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#AC6801</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#8A4F00", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>800</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#8A4F00</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#723D00", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>900</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#723D00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style={{display:"flex", justifyContent:"space-between",alignItems:"flex-start"}}>
+        <div>FONT</div>
+        <div style={{display:"grid", gridTemplateColumns:"auto auto auto auto auto", gap:"32px"}}>
+            <div>
+                <div style={{backgroundColor:"#F7F7F7", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>100</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#F7F7F7</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#EFEFEF", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>200</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#EFEFEF</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#D1D1D1", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>300</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#D1D1D1</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#A3A3A3", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>400</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#A3A3A3</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#676767", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>500</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3", color:"#A3A3A3"}}>#676767</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#584B4C", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>600</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#584B4C</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#4A3337", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>700</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#4A3337</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#3B2027", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>800</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#3B2027</div>
+                </div>
+            </div>
+            <div>
+                <div style={{backgroundColor:"#31131E", width:"100px", height:"60px", borderRadius:"12px"}}></div>
+                <div style={{marginLeft:"3px"}}>
+                    <div>900</div>
+                    <div style={{fontSize:"12px", color:"#A3A3A3"}}>#31131E</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+## Example
+
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+    {children}
+  </span>
+);
+
+<Highlight color="#25c2a0">Docusaurus green</Highlight> and <Highlight color="#1877F2">Facebook blue</Highlight> are my favorite colors.
+
+I can write **Markdown** alongside my _JSX_!
