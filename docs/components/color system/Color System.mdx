@@ -1,0 +1,26 @@
+import ColorPalette from '@site/src/components/ColorPalette';
+
+
+Color System is a set of colors that represents a specific visual spectrum. Technotic also have a color system where it will be used for the color standardization of BNCC's Website.
+
+## Default Color Palette
+
+<ColorPalette />
+
+## Example
+
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+    {children}
+  </span>
+);
+
+<Highlight color="#25c2a0">Docusaurus green</Highlight> and <Highlight color="#1877F2">Facebook blue</Highlight> are my favorite colors.
+
+I can write **Markdown** alongside my _JSX_!

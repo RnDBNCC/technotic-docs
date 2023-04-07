@@ -1,0 +1,32 @@
+.color-palette-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.color-palette-inner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.colors-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 32px;
+}
+
+.color-palette {
+    width: 100px;
+    height: 60px;
+    border-radius: 12px;
+}
+
+.color-palette-desc {
+    margin-left: 3px;
+}
+
+.color-palette-hex {
+    font-size: 12px;
+    color: #A3A3A3;
+}
