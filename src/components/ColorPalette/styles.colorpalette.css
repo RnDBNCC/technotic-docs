@@ -16,6 +16,47 @@
     gap: 32px;
 }
 
+.palette-pointer {
+    position: relative;
+    cursor: pointer;
+}
+
+.palette-pointer .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #22539F;
+  color: #F7F7F7;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 50%;
+  margin-left: -70px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+}
+
+.palette-pointer .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #22539F transparent transparent transparent;
+}
+
+.palette-pointer:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
 .color-palette {
     width: 100px;
     height: 60px;
