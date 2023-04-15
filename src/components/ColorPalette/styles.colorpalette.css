@@ -10,6 +10,10 @@
     align-items: flex-start;
 }
 
+.color-name {
+    width: auto;
+}
+
 .colors-container {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
@@ -21,40 +25,40 @@
     cursor: pointer;
 }
 
-.palette-pointer .tooltiptext {
-  visibility: hidden;
-  width: 140px;
-  background-color: #22539F;
-  color: #F7F7F7;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 110%;
-  left: 50%;
-  margin-left: -70px;
-  opacity: 0;
-  transition: opacity 0.3s;
-  font-size: 12px;
-  letter-spacing: 0.1rem;
-  font-weight: 500;
+.palette-pointer .tooltip-text {
+    visibility: hidden;
+    width: 140px;
+    background-color: #22539f;
+    color: #f7f7f7;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -70px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
 }
 
-.palette-pointer .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #22539F transparent transparent transparent;
+.palette-pointer .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #22539f transparent transparent transparent;
 }
 
-.palette-pointer:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
+.palette-pointer:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }
 
 .color-palette {
@@ -64,10 +68,53 @@
 }
 
 .color-palette-desc {
+    font-size: 16px;
     margin-left: 3px;
 }
 
 .color-palette-hex {
     font-size: 12px;
-    color: #A3A3A3;
+    color: #a3a3a3;
+}
+
+@media screen and (max-width: 768px) {
+    .color-palette-inner-container {
+        justify-content: flex-start;
+        gap: 100px;
+    }
+
+    .color-name {
+        width: 60px;
+    }
+
+    .color-palette {
+        width: 75px;
+        height: 45px;
+        border-radius: 8px;
+    }
+
+    .color-palette-desc {
+        font-size: 12px;
+    }
+
+    .color-palette-hex {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .color-palette-inner-container {
+        align-items: center;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .color-name {
+        width: auto;
+    }
+
+    .colors-container {
+        grid-template-columns: auto auto auto;
+        gap: 40px;
+    }
 }
