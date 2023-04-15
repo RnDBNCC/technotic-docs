@@ -119,6 +119,10 @@
         padding: 10px 0 0 0;
     }
 
+    .features_item {
+        margin-top: -30px;
+    }
+
     .features_container .features_card_container .features_name {
         font-size: 20px;
     }
