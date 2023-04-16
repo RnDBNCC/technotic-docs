@@ -1,6 +1,8 @@
-export const PALETTE = [
+export const PALETTES = [
     {
-        blueColor: [
+        NAME: "BLUE",
+        OFFSET: 0,
+        COLORS: [
             { thickness: "BLUE100", code: "#D2E8FA" },
             { thickness: "BLUE200", code: "#A8CFF5" },
             { thickness: "BLUE300", code: "#77A9E2" },
@@ -11,7 +13,11 @@ export const PALETTE = [
             { thickness: "BLUE800", code: "#0A215C" },
             { thickness: "BLUE900", code: "#06164C" },
         ],
-        greenColor: [
+    },
+    {
+        NAME: "GREEN",
+        OFFSET: 9,
+        COLORS: [
             { thickness: "GREEN100", code: "#E6FBE4" },
             { thickness: "GREEN200", code: "#CAF8CA" },
             { thickness: "GREEN300", code: "#A9EBAF" },
@@ -22,7 +28,11 @@ export const PALETTE = [
             { thickness: "GREEN800", code: "#206D4C" },
             { thickness: "GREEN900", code: "#135A43" },
         ],
-        redColor: [
+    },
+    {
+        NAME: "RED",
+        OFFSET: 18,
+        COLORS: [
             { thickness: "RED100", code: "#FDE8DA" },
             { thickness: "RED200", code: "#FCCBB6" },
             { thickness: "RED300", code: "#F7A690" },
@@ -33,7 +43,11 @@ export const PALETTE = [
             { thickness: "RED800", code: "#85162C" },
             { thickness: "RED900", code: "#6E0D29" },
         ],
-        yellowColor: [
+    },
+    {
+        NAME: "YELLOW",
+        OFFSET: 27,
+        COLORS: [
             { thickness: "YELLOW100", code: "#FEF4CB" },
             { thickness: "YELLOW200", code: "#FDE699" },
             { thickness: "YELLOW300", code: "#FAD365" },
@@ -44,7 +58,11 @@ export const PALETTE = [
             { thickness: "YELLOW800", code: "#8A4F00" },
             { thickness: "YELLOW900", code: "#723D00" },
         ],
-        greyColor: [
+    },
+    {
+        NAME: "GREY",
+        OFFSET: 36,
+        COLORS: [
             { thickness: "GREY100", code: "#F7F7F7" },
             { thickness: "GREY200", code: "#EFEFEF" },
             { thickness: "GREY300", code: "#D1D1D1" },
@@ -58,7 +76,7 @@ export const PALETTE = [
     },
 ];
 
-export const HEXCODE = [
+export const HEXCODES = [
     "#D2E8FA",
     "#A8CFF5",
     "#77A9E2",

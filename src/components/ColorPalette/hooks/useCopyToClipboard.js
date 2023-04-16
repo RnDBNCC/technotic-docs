@@ -2,7 +2,8 @@ import { useState } from "react";
 
 const useCopyToClipboard = () => {
     const [copiedText, setCopiedText] = useState(null);
-    const [tooltip, setTooltip] = useState("Copy to clipboard");
+    const DEFAULT_COPY_TOOLTIP_TEXT = "Copy to clipboard";
+    const [tooltip, setTooltip] = useState(DEFAULT_COPY_TOOLTIP_TEXT);
 
     const copy = async (text) => {
         try {
@@ -11,14 +12,16 @@ const useCopyToClipboard = () => {
             setTooltip("Copied!");
             return true;
         } catch (error) {
-            console.warn("Copy failed", error);
             setCopiedText(null);
+            setTooltip("Copy failed!");
             return false;
         }
     };
 
     const resetTooltip = () => {
-        setTooltip("Copy to clipboard");
+        // setTimeout(() => {
+            setTooltip(DEFAULT_COPY_TOOLTIP_TEXT);
+        // }, 3000);
     };
 
     return {
