@@ -5,7 +5,7 @@ import useCopyToClipboard from "./hooks/useCopyToClipboard";
 import "./styles.colorpalette.css";
 
 const ColorPalette = () => {
-    const { copy, tooltip, visible } = useCopyToClipboard();
+    const { copy, tooltip, visible, tooltipVisibility } = useCopyToClipboard();
 
     return (
         <div className="color-palette-container">
@@ -20,6 +20,7 @@ const ColorPalette = () => {
                             <div
                                 className="palette-pointer"
                                 onClick={() => copy(hex.thickness)}
+                                onMouseOver={tooltipVisibility}
                                 key={index}
                             >
                                 {visible && (

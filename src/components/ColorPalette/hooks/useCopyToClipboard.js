@@ -23,11 +23,16 @@ const useCopyToClipboard = () => {
         }
     };
 
+    const tooltipVisibility = () => {
+        setVisible(true);
+    }
+
     return {
         copiedText,
         tooltip,
         visible,
         copy,
+        tooltipVisibility,
     };
 };
 
