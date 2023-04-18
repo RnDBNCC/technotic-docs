@@ -34,38 +34,26 @@
 .parallax > use:nth-child(1) {
     animation-delay: -2s;
     animation-duration: 7s;
+    fill: var(--ifm-color-wave-child-1);
 }
-
-/* .dark-mode .parallax > use:nth-child(1) {
-    fill: rgba(0,0,0,0.7);
-} */
 
 .parallax > use:nth-child(2) {
     animation-delay: -3s;
     animation-duration: 10s;
+    fill: var(--ifm-color-wave-child-2);
 }
-
-/* .dark-mode .parallax > use:nth-child(2) {
-    fill: rgba(0,0,0,0.5);
-} */
 
 .parallax > use:nth-child(3) {
     animation-delay: -4s;
     animation-duration: 13s;
+    fill: var(--ifm-color-wave-child-3);
 }
-
-/* .dark-mode .parallax > use:nth-child(3) {
-    fill: rgba(0,0,0,0.3);
-} */
 
 .parallax > use:nth-child(4) {
     animation-delay: -5s;
     animation-duration: 20s;
+    fill: var(--ifm-color-wave-child-4);
 }
-
-/* .dark-mode .parallax > use:nth-child(4) {
-    fill: #000;
-} */
 
 @keyframes move-forever {
     0% {

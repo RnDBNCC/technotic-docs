@@ -55,10 +55,6 @@ const config = {
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
-            colorMode: {
-                // sementara Dark Modenya dimatikan dulu
-                disableSwitch: true,
-            },
             image: "img/docusaurus-social-card.jpg",
             navbar: {
                 title: "Technotic",
