@@ -6,9 +6,13 @@ Here are the steps that must be followed to deploy Technotic in npmjs
 
 ![Deployment](/img/Deployment.png)
 
+## Merge branch 
+
+Make sure to merge the branch you want to deploy to the master branch by creating pull request
+
 ## Push Force
 
-After merging your branch and master, push force to production branch:
+After merging your branch and master, push force master to production branch:
 
 ```
 git push origin +master:production
@@ -16,14 +20,25 @@ git push origin +master:production
 
 ## Run Workflow
 
-```
-Go to production branch -> Actions -> Technotic Publish Action -> Run Workflow
-```
 
-### Change the workflow of branch to production and define the version type
+### 1. Go to production branch 
+![Deployment](/img/Deployment1.png)
+
+### 2. Go to Actions 
+![Deployment](/img/Deployment2.png)
+
+### 3. Go to Technotic Publish Action 
+![Deployment](/img/Deployment3.png)
+
+### 4. Click Run Workflow
+![Deployment](/img/Deployment4.png)
+
+#### Change use workflow of branch to `production` and define the `version type`
+
+![Deployment](/img/Deployment5.png)
 
 ```
-Version Type [major | minor | patch]
+The Explanation of Version Type (major | minor | patch)
 Major: Big updates such as design changes
 Minor: Add new features
 Patch: Fix bug components such as margin, colour
@@ -36,7 +51,7 @@ It will be commited in production branch as <b> Automated Bump Version (updated 
 ## Merge and Pull Request
 
 Last step is to <b> merge manually from the production branch to the master branch </b> by creating a pull request, which will update the master branch to the latest commit
-
+![Deployment](/img/Deployment6.png)
 <b>
   {" "}
   Check the version of Technotic at
