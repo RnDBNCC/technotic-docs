@@ -1,4 +1,4 @@
-import { Typography as Text } from "technotic";
+import { Typography as Text, ColorSystem } from "technotic";
 
 Typography is the art of positioning letters and text so that the reader can easily read, understand, and find the material visually pleasing.
 
@@ -27,47 +27,108 @@ import { Typography } from 'technotic';
     <Text
         weight="bold"
         size="heading-1"
-        textLabel="Introduction"
+        label="Introduction"
     />
     <Text
         weight="medium"
-        size="body-5"
-        textLabel="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet tellus tincidunt varius pharetra. Phasellus odio nibh, fringilla eu molestie eget, rhoncus ac odio. Donec quis odio convallis velit commodo dapibus vitae eu turpis. Sed quis condimentum urna. Pellentesque tristique, mi in dictum rhoncus, diam ipsum hendrerit purus, gravida pretium erat lacus a nunc. Maecenas id purus tempor, hendrerit sem vitae, tempor tortor. Curabitur nec mauris ac neque vestibulum molestie. Nullam condimentum, metus at sodales sagittis, orci eros volutpat orci, at scelerisque risus turpis ac ligula. Morbi quis turpis ut nisl laoreet placerat."
+        size="paragraph-5"
+        label="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet tellus tincidunt varius pharetra. Phasellus odio nibh, fringilla eu molestie eget, rhoncus ac odio. Donec quis odio convallis velit commodo dapibus vitae eu turpis. Sed quis condimentum urna. Pellentesque tristique, mi in dictum rhoncus, diam ipsum hendrerit purus, gravida pretium erat lacus a nunc. Maecenas id purus tempor, hendrerit sem vitae, tempor tortor. Curabitur nec mauris ac neque vestibulum molestie. Nullam condimentum, metus at sodales sagittis, orci eros volutpat orci, at scelerisque risus turpis ac ligula. Morbi quis turpis ut nisl laoreet placerat."
     />
+    <br />
     <Text
         weight="medium"
-        size="body-5"
-        textLabel="Cras ultrices eros ex, vel condimentum dui dapibus id. Donec nunc urna, elementum sed pellentesque eu, aliquet eu tellus. Vestibulum tincidunt nulla tristique ante facilisis, vel ornare leo blandit. Donec ut massa justo. Aliquam sed metus tortor. Proin commodo elit sed odio laoreet, sit amet mollis velit efficitur. Nulla facilisi. Quisque ultrices pretium sapien, in finibus sapien molestie sit amet. Quisque pretium quam in ante fermentum, ac laoreet lacus sodales. Donec gravida neque at sapien porttitor maximus. Aliquam non justo eget urna ultrices cursus ac quis quam. Curabitur interdum porttitor pharetra."
+        size="paragraph-5"
+        label="Cras ultrices eros ex, vel condimentum dui dapibus id. Donec nunc urna, elementum sed pellentesque eu, aliquet eu tellus. Vestibulum tincidunt nulla tristique ante facilisis, vel ornare leo blandit. Donec ut massa justo. Aliquam sed metus tortor. Proin commodo elit sed odio laoreet, sit amet mollis velit efficitur. Nulla facilisi. Quisque ultrices pretium sapien, in finibus sapien molestie sit amet. Quisque pretium quam in ante fermentum, ac laoreet lacus sodales. Donec gravida neque at sapien porttitor maximus. Aliquam non justo eget urna ultrices cursus ac quis quam. Curabitur interdum porttitor pharetra."
     />
+    <br />
     <Text
         weight="bold"
-        size="body-5"
-        textLabel="Sed nisl quam, hendrerit id congue vel, euismod et arcu. Proin dictum eros non lorem viverra, sit amet rhoncus purus ullamcorper. Integer sed diam vel sapien tristique lacinia."
+        size="paragraph-5"
+        label="Sed nisl quam, hendrerit id congue vel, euismod et arcu. Proin dictum eros non lorem viverra, sit amet rhoncus purus ullamcorper. Integer sed diam vel sapien tristique lacinia."
     />
     <ul style={{listStyleType: "circle"}}>
     <li>
         <Text
             weight="medium"
-            size="body-5"
-            textLabel="Lorem"
+            size="paragraph-5"
+            label="Lorem"
+            color={ColorSystem.BLUE500}
         />
     </li>
     <li>
         <Text
             weight="medium"
-            size="body-5"
-            textLabel="Ipsum"
+            size="paragraph-5"
+            label="Ipsum"
+            color={ColorSystem.BLUE500}
         />
     </li>
     <li>
         <Text
             weight="medium"
-            size="body-5"
-            textLabel="Test"
+            size="paragraph-5"
+            label="Test"
+            color={ColorSystem.BLUE500}
         />
     </li>
 </ul>
 </div>
+
+#### Source code
+```
+import { Typography as Text, ColorSystem } from "technotic";
+
+const { BLUE500 } = ColorSystem;
+
+<Text
+    weight="bold"
+    size="heading-1"
+    label="Introduction"
+/>
+<Text
+    weight="medium"
+    size="paragraph-5"
+    label="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet tellus tincidunt varius pharetra. Phasellus odio nibh, fringilla eu molestie eget, rhoncus ac odio. Donec quis odio convallis velit commodo dapibus vitae eu turpis. Sed quis condimentum urna. Pellentesque tristique, mi in dictum rhoncus, diam ipsum hendrerit purus, gravida pretium erat lacus a nunc. Maecenas id purus tempor, hendrerit sem vitae, tempor tortor. Curabitur nec mauris ac neque vestibulum molestie. Nullam condimentum, metus at sodales sagittis, orci eros volutpat orci, at scelerisque risus turpis ac ligula. Morbi quis turpis ut nisl laoreet placerat."
+/>
+<br />
+<Text
+    weight="medium"
+    size="paragraph-5"
+    label="Cras ultrices eros ex, vel condimentum dui dapibus id. Donec nunc urna, elementum sed pellentesque eu, aliquet eu tellus. Vestibulum tincidunt nulla tristique ante facilisis, vel ornare leo blandit. Donec ut massa justo. Aliquam sed metus tortor. Proin commodo elit sed odio laoreet, sit amet mollis velit efficitur. Nulla facilisi. Quisque ultrices pretium sapien, in finibus sapien molestie sit amet. Quisque pretium quam in ante fermentum, ac laoreet lacus sodales. Donec gravida neque at sapien porttitor maximus. Aliquam non justo eget urna ultrices cursus ac quis quam. Curabitur interdum porttitor pharetra."
+/>
+<br />
+<Text
+    weight="bold"
+    size="paragraph-5"
+    label="Sed nisl quam, hendrerit id congue vel, euismod et arcu. Proin dictum eros non lorem viverra, sit amet rhoncus purus ullamcorper. Integer sed diam vel sapien tristique lacinia."
+/>
+<ul style={{listStyleType: "circle"}}>
+    <li>
+        <Text
+            weight="medium"
+            size="paragraph-5"
+            label="Lorem"
+            color={BLUE500}
+        />
+    </li>
+    <li>
+        <Text
+            weight="medium"
+            size="paragraph-5"
+            label="Ipsum"
+            color={BLUE500}
+        />
+    </li>
+    <li>
+        <Text
+            weight="medium"
+            size="paragraph-5"
+            label="Test"
+            color={BLUE500}
+        />
+    </li>
+</ul>
+```
 
 <div style={{
     border: "2px solid #F6F7F8",
@@ -77,42 +138,49 @@ import { Typography } from 'technotic';
     <Text
         weight="bold"
         size="heading-1"
-        textLabel="heading-1. Technotic"
+        label="heading-1. Technotic"
     />
+    <br />
     <Text
         weight="bold"
         size="heading-2"
-        textLabel="heading-2. Technotic"
+        label="heading-2. Technotic"
     />
+    <br />
     <Text
         weight="bold"
         size="heading-3"
-        textLabel="heading-3. Technotic"
+        label="heading-3. Technotic"
     />
+    <br />
     <Text
         weight="bold"
         size="heading-4"
-        textLabel="heading-4. Technotic"
+        label="heading-4. Technotic"
     />
+    <br />
     <Text
         weight="bold"
         size="heading-5"
-        textLabel="heading-5. Technotic"
+        label="heading-5. Technotic"
     />
+    <br />
     <Text
         weight="bold"
         size="heading-6"
-        textLabel="heading-6. Technotic"
+        label="heading-6. Technotic"
     />
+    <br />
     <Text
         weight="bold"
         size="heading-7"
-        textLabel="heading-7. Technotic"
+        label="heading-7. Technotic"
     />
+    <br />
     <Text
         weight="bold"
         size="heading-8"
-        textLabel="heading-8. Technotic"
+        label="heading-8. Technotic"
     />
 </div>
 
@@ -123,49 +191,49 @@ import { Typography as Text } from 'technotic';
 <Text
     weight="bold"
     size="heading-1"
-    textLabel="heading-1. Technotic"
+    label="heading-1. Technotic"
 />
 
 <Text
     weight="bold"
     size="heading-2"
-    textLabel="heading-2. Technotic"
+    label="heading-2. Technotic"
 />
 
 <Text
     weight="bold"
     size="heading-3"
-    textLabel="heading-3. Technotic"
+    label="heading-3. Technotic"
 />
 
 <Text
     weight="bold"
     size="heading-4"
-    textLabel="heading-4. Technotic"
+    label="heading-4. Technotic"
 />
 
 <Text
     weight="bold"
     size="heading-5"
-    textLabel="heading-5. Technotic"
+    label="heading-5. Technotic"
 />
 
 <Text
     weight="bold"
     size="heading-6"
-    textLabel="heading-6. Technotic"
+    label="heading-6. Technotic"
 />
 
 <Text
     weight="bold"
     size="heading-7"
-    textLabel="heading-7. Technotic"
+    label="heading-7. Technotic"
 />
 
 <Text
     weight="bold"
     size="heading-8"
-    textLabel="heading-8. Technotic"
+    label="heading-8. Technotic"
 />
 ```
 
@@ -177,42 +245,49 @@ import { Typography as Text } from 'technotic';
     <Text
         weight="regular"
         size="paragraph-1"
-        textLabel="paragraph-1. Technotic"
+        label="paragraph-1. Technotic"
     />
+    <br />
     <Text
         weight="regular"
         size="paragraph-2"
-        textLabel="paragraph-2. Technotic"
+        label="paragraph-2. Technotic"
     />
+    <br />
     <Text
         weight="regular"
         size="paragraph-3"
-        textLabel="paragraph-3. Technotic"
+        label="paragraph-3. Technotic"
     />
+    <br />
     <Text
         weight="regular"
         size="paragraph-4"
-        textLabel="paragraph-4. Technotic"
+        label="paragraph-4. Technotic"
     />
+    <br />
     <Text
         weight="regular"
         size="paragraph-5"
-        textLabel="paragraph-5. Technotic"
+        label="paragraph-5. Technotic"
     />
+    <br />
     <Text
         weight="regular"
         size="paragraph-6"
-        textLabel="paragraph-6. Technotic"
+        label="paragraph-6. Technotic"
     />
+    <br />
     <Text
         weight="regular"
         size="paragraph-7"
-        textLabel="paragraph-7. Technotic"
+        label="paragraph-7. Technotic"
     />
+    <br />
     <Text
         weight="regular"
         size="paragraph-8"
-        textLabel="paragraph-8. Technotic"
+        label="paragraph-8. Technotic"
     />
 </div>
 
@@ -223,48 +298,48 @@ import { Typography as Text } from 'technotic';
 <Text
     weight="regular"
     size="paragraph-1"
-    textLabel="paragraph-1. Technotic"
+    label="paragraph-1. Technotic"
 />
 
 <Text
     weight="regular"
     size="paragraph-2"
-    textLabel="paragraph-2. Technotic"
+    label="paragraph-2. Technotic"
 />
 
 <Text
     weight="regular"
     size="paragraph-3"
-    textLabel="paragraph-3. Technotic"
+    label="paragraph-3. Technotic"
 />
 
 <Text
     weight="regular"
     size="paragraph-4"
-    textLabel="paragraph-4. Technotic"
+    label="paragraph-4. Technotic"
 />
 
 <Text
     weight="regular"
     size="paragraph-5"
-    textLabel="paragraph-5. Technotic"
+    label="paragraph-5. Technotic"
 />
 
 <Text
     weight="regular"
     size="paragraph-6"
-    textLabel="paragraph-6. Technotic"
+    label="paragraph-6. Technotic"
 />
 
 <Text
     weight="regular"
     size="paragraph-7"
-    textLabel="paragraph-7. Technotic"
+    label="paragraph-7. Technotic"
 />
 
 <Text
     weight="regular"
     size="paragraph-8"
-    textLabel="paragraph-8. Technotic"
+    label="paragraph-8. Technotic"
 />
 ```
