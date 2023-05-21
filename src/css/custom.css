@@ -36,3 +36,7 @@
   --ifm-color-wave-child-4: #1b1b1d;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.pagination-nav__label {
+  color: var(--ifm-color-primary);
+}
