@@ -105,7 +105,6 @@ Branching rules are and important aspect of <a href={'https://www.atlassian.com/
                \
                 o---o---o           Feature
 
-
     Any new feature or idea that is not part of a release or a sprint. A branch for playing around. This is a branch for experimenting with new ideas. It is not part of the master branch and is not merged into the master branch. It is used to test new ideas and concepts.
 
     -   Experimental branches are not associated with any particular releases or sprints because they are different from the master development cycle. This enables developers to work independently of the timeframe for the primary project on fresh concepts.
@@ -119,27 +118,45 @@ Branching rules are and important aspect of <a href={'https://www.atlassian.com/
     experimental/dark-theme-support
     ```
 
-    Build
+    ##### <a href={'https://www.youtube.com/watch?v=BngtN4rUCYo'} style={{color: '#22539F'}}>D. Build</a>
 
+    ![Deployment](/img/branch-rules/BuildBranch.png)
     A branch specifically for creating specific build artifacts or for doing code coverage runs.
 
     Examples:
 
+    ```
     build/jacoco-metric
-    Release
+    ```
 
+    <br />
+    <br />
+
+    ##### <a href={'https://www.youtube.com/watch?v=BngtN4rUCYo'} style={{color: '#22539F'}}>E. Release</a>
+
+    ![Deployment](/img/branch-rules/ReleaseBranch.png)
+    
     A branch for tagging a specific release version
 
     Examples:
 
+    ```
     release/myapp-1.01.123
+    ```
+
     Git also supports tagging a specific commit history of the repository. A release branch is used if there is a need to make the code available for checkout or use.
 
-    Merging
+    <br />
+    <br />
+
+    ##### <a href={'https://www.youtube.com/watch?v=BngtN4rUCYo'} style={{color: '#22539F'}}>F. Merging</a>
 
     A temporary branch for resolving merge conflicts, usually between the latest development and a feature or Hotfix branch. This can also be used if two branches of a feature being worked on by multiple developers need to be merged, verified and finalized.
 
     Examples:
-
+    ```
     merge/dev_lombok-refactoring
-    merge/combined-device-support
+    ```
+    ```
+    merge/combined-device-support   
+    ```
