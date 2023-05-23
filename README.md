@@ -1,3 +1,7 @@
+# Technotic Documentation
+
+Technotic Documentation is a comprehensive guide for utilizing the Technotic design system, enabling users to gain a better understanding of configuration, component usage, and deployment.
+
 # Website
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
