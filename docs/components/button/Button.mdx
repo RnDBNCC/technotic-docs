@@ -4,6 +4,8 @@ sidebar_position: 4
 
 import { Button } from "technotic";
 
+<br/>
+
 ## Introduction
 
 A button is a specific type of user interface element used in web development to provide interactivity and trigger actions when clicked or activated. It is a graphical element that is typically styled with visual cues to indicate its purpose and can be customized to fit the overall design system of a website or application.
@@ -11,6 +13,8 @@ A button is a specific type of user interface element used in web development to
 Buttons are essential components of a button design system and are used for various purposes such as submitting a form, navigating between pages, triggering specific functions or operations, and providing calls to action for users. They can be designed with different sizes, shapes, colors, and styles to create visual hierarchy and convey different levels of importance or urgency.
 
 Button design systems help maintain consistency and coherence throughout a website or application by providing a set of predefined styles, guidelines, and components for creating buttons. This ensures that buttons across different pages and sections of the interface have a unified look and feel, enhancing the overall user experience and promoting intuitive interaction.
+
+<br/>
 
 ## Import Button
 To call technotic's Button component, you can use the following code:
@@ -21,6 +25,8 @@ import { Button } from 'technotic';
 <Button>[Text/element U want to insert]</Button>
 ```
 
+<br/>
+
 ## Default Button Usage
 
 <Button>Default Button</Button>
@@ -29,6 +35,8 @@ import { Button } from 'technotic';
 ```tsx
 <Button>[Text U want to insert]</Button>
 ```
+
+<br/>
 
 ## Button Customization
 
@@ -63,6 +71,8 @@ There are 3 sizes of BNCC Button, which are:
 </Button>
 ```
 
+<br/>
+
 ### Button type
 
 There are 4 type of BNCC Button, which are:
@@ -96,49 +106,107 @@ There are 4 type of BNCC Button, which are:
 
 - disabled
 
-    <Button btnType="disabled">Link</Button>
+    1. Primary
+    <Button btnType="primary" disabled>Primary Disabled</Button>
+    <br/>
+
+    ```tsx
+    <Button btnType="primary" disabled>
+        Primary Disabled
+    </Button>
+    ```
+    2. Secondary
+    <Button btnType="secondary" disabled>Secondary Disabled</Button>
+    <br/>
+
+    ```tsx
+    <Button btnType="secondary" disabled>
+        Secondary Disabled
+    </Button>
+    ```
+
+    3. Link
+    <Button btnType="link" disabled>Link Disabled</Button>
+    <br/>
+
+    ```tsx
+    <Button btnType="link" disabled>
+        Disabled
+    </Button>
+    ```
+
+<br/>
+
+### Button Color on every type
+
+Example of every button types of BNCC Button can be colorized, which are:
+used:
 ```tsx
-<Button btnType="disabled">
-    Disabled
-</Button>
+btnColor="[your color]"
 ```
 
-### Button Color on every typ
+- Primary Button, Secondary Button, Link Button <span style={{color: 'red', fontWeight: 800}}>(Red)</span>
 
-There are 4 types of BNCC Button can be colorized, which are:
+   <div style={{ display: "flex", gap: "1rem" }}>
+        <Button btnType="primary" btnColor="red">
+            Primary
+        </Button>
+        <Button btnType="secondary" btnColor="red">
+            Secondary
+        </Button>
+        <Button btnType="link" btnColor="red">
+            Link
+        </Button>
+    </div>
 
-- primary Color <span style={{color: 'red', fontWeight: 800}}>(Red)</span>
-
-    <Button btnType="primary" btnColor="red">Primary</Button>
 ```tsx
 <Button btnType="primary" btnColor="red">
     Primary
 </Button>
 ```
-
-- secondary Color <span style={{color: 'blue', fontWeight: 800}}>(Blue)</span>
-
-    <Button btnType="secondary" btnColor="blue">Secondary</Button>
 ```tsx
-<Button btnType="secondary">
+<Button btnType="secondary" btnColor="red">
     Secondary
 </Button>
 ```
-
-- link Color <span style={{color: 'pink', fontWeight: 800}}>(Pink)</span>
-
-    <Button btnType="link" btnColor={'pink'}>Link</Button>
 ```tsx
-<Button btnType="link" btnColor={'yellow'}>
+<Button btnType="link" btnColor="red">
     Link
 </Button>
 ```
 
-- disabled Color <span style={{color: 'grey', fontWeight: 800}}>(Grey)</span>
+<br/>
 
-    <Button btnType="disabled" btnColor="grey">Link</Button>
+### How Button Link works?
+
+<span style={{fontWeight: 'bold'}}>a. if u want to redirect link to another page in different domain by using:</span>
+
+from react u can redirect link to another page domain by using:
+
+<Button btnType="link" link="https://www.youtube.com/">
+    <p style={{color:'red'}}>Click Here To redirect to a youtube</p>
+</Button>
+
 ```tsx
-<Button btnType="disabled" btnColor="grey">
-    Disabled
+<Button btnType="link" link="https://www.youtube.com/">Link</Button>
+```
+
+<br/>
+
+import { Configuration } from '../../configuration/Configuration.mdx';
+<span style={{fontWeight: 'bold'}}>b. if u want to redirect link to another page in same domain <span  style={{color: 'red'}}>without reloading</span> by using:</span>
+
+from react u can redirect link to another page in same domain, like this one:
+
+<Button btnType="link" link="/docs/configuration/#commands" element={<Configuration/>}>
+    <p style={{color:'red'}}>Click here to redirect to configuration</p>
+</Button>
+
+```tsx
+// import element u want to redirect
+import { Configuration } from '../../configuration/Configuration.mdx';
+
+<Button btnType="link" link="/docs/configuration/#commands" element={<Configuration/>}>
+    Link
 </Button>
 ```
