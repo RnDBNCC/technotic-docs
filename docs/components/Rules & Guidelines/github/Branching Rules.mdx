@@ -1,0 +1,162 @@
+Branching rules are and important aspect of <a href={'https://www.atlassian.com/git/tutorials/what-is-version-control'} style={{color: '#22539F'}}>version control systems</a>, allowing teams to manage parallel development efforts and collaborate effectively. This documentation provides an overview of branching rules and best practices to follow when working with branches. In this article, we'll discuss how to use Git branching and how to work with remote repositories and local branches.
+
+## Knowledge of Git Branching
+
+### things to consider in making a good branch
+
+1. #### <a href={'https://thenewstack.io/dont-mess-with-the-master-working-with-branches-in-git-and-github/'} style={{color: '#22539F'}}>Main/Branch</a>
+    The main branch or also known as the "master" branch, represents the mainline development.
+    - It should always contain stable and production-ready code.
+    - this branch is not visible to others.
+    - Direct commits to the main branch should be limited and thoroughly reviewed.
+    - This is the branch which all the other branches are merged into.
+
+<br />
+
+2.  #### <a href={'https://dev.to/couchcamote/git-branching-name-convention-cch'} style={{color: '#22539F'}}>Branch Naming Convention</a>
+
+    Use a consistent naming convention for branches. This could include a prefix like feature/ for feature branches, bugfix/ for bug fixes, hotfix/ for critical fixes, etc. Avoid using generic names like dev or test.
+    Branch names should be descriptive and informative.
+
+    -   Use all lowercase letters.
+    -   Avoid special characters.
+    -   Avoid long descriptive names.
+    -   Use the following format: type/description.
+
+    In general, the conventional naming branch consists of several categories:
+
+    ##### <a href={'https://www.optimizely.com/optimization-glossary/feature-branch/'} style={{color: '#22539F'}}>A. Feature Branches</a>
+
+    ![Deployment](/img/branch-rules/FeatureFlow.png)
+
+    Feature Branches: When working on a new feature or enhancement, create a new branch of the main branch. Give the branch a descriptive name that reflects the feature. Feature branches are used to develop new features for upcoming or distant future releases.
+
+    -   Feature branches are created from the main branch and are merged back into the main branch when the feature is complete.
+    -   Feature branches should never interact directly with the origin.
+
+    <br />
+
+    For example:
+
+    ```
+    feature/user-authentication
+    ```
+
+    <br />
+    <br />
+
+    ##### <a href={'https://gcbenison.wordpress.com/2012/01/17/git-bugfix-branches-choose-the-root-wisely/'} style={{color: '#22539F'}}>B. Bugfix Branches</a>
+
+    ![Deployment](/img/branch-rules/BugFix.png)
+
+    BugFix Branches: When fixing a bug, create a new branch of the main branch. Give the branch a descriptive name that reflects the bug and/or issue number. Fix branches are used to fix bugs in the production code. When fixing a bug, create a new branch of the main branch. Give the branch a descriptive name that reflects the bug and/or issue number. Bugfix branches are used to fix bugs in the production code.
+
+    -   A bugfix is a resolution to a non-critical issue or bug in the codebase.
+    -   Bugfixes are typically planned and scheduled as part of regular development cycles.
+    -   They are often applied to the main branch or relevant feature branches.
+    -   Bugfixes undergo code review and testing before being merged into the main branch.
+
+    <br />
+
+    For example:
+
+    ```
+    bugfix/more-gray-shades
+    ```
+
+    ```
+    bugfix/JIRA-1444_gray-on-blur-fix
+    ```
+
+    <br />
+    <br />
+
+    ##### <a href={'https://www.youtube.com/watch?v=5q75eeEYApk'} style={{color: '#22539F'}}>C. HotFix Branches</a>
+
+    ![Deployment](/img/branch-rules/HotFix.png)
+    Hotfix Branches: When fixing a critical bug in production, create a new branch of the main branch. Give the branch a descriptive name that reflects the bug and/or issue number. Hotfix branches are used to fix bugs in the production code.
+
+    -   A hotfix is an urgent and critical fix that addresses a severe issue impacting production or causing significant disruptions.
+    -   Hotfixes are typically unscheduled and require immediate attention to resolve the problem.
+    -   Hotfixes are usually merge or applied to a dedicated branch directly from the main branch or a specific release branch.
+    -   They may bypass some regular development processes, such as extensive code review, and are focused on resolving the issue quickly.
+    -   Once the hotfix is tested and validated, it is typically merged into the main branch and other relevant branches.
+
+    <br />
+
+    For example:
+
+    ```
+    hotfix/disable-endpoint-zero-day-exploit
+    ```
+
+    ```
+    hotfix/increase-scaling-threshold
+    ```
+
+    <br />
+    <br />
+
+    ##### <a href={'https://www.youtube.com/watch?v=BngtN4rUCYo'} style={{color: '#22539F'}}>C. Experimental Branches</a>
+
+                      o---o---o---o---o  Master
+                 /
+        o---o---o---o---o---o---o    Experimental
+               \
+                o---o---o           Feature
+
+    Any new feature or idea that is not part of a release or a sprint. A branch for playing around. This is a branch for experimenting with new ideas. It is not part of the master branch and is not merged into the master branch. It is used to test new ideas and concepts.
+
+    -   Experimental branches are not associated with any particular releases or sprints because they are different from the master development cycle. This enables developers to work independently of the timeframe for the primary project on fresh concepts.
+    -   Experimental branches give programmers a specialized area to experiment, investigate, and test out novel concepts or methods without affecting the functioning or stability of the master branch.
+    -   Experimental branches are typically kept separate from the master branch and other feature or bug fix branches. Unlike feature or bug fix branches, which are created to implement specific functionality or fix issues and eventually merged into the master branch, experimental branches are not intended to be merged into the master branch.
+    -   Testing new thoughts and ideas: Experimental branches act as a field of experimentation for novel concepts, theories, or technology. Before determining whether to include these concepts in the master branch, developers can iterate, improve, and assess their viability.
+
+    For example:
+
+    ```
+    experimental/dark-theme-support
+    ```
+
+    ##### <a href={'https://www.youtube.com/watch?v=BngtN4rUCYo'} style={{color: '#22539F'}}>D. Build</a>
+
+    ![Deployment](/img/branch-rules/BuildBranch.png)
+    A branch specifically for creating specific build artifacts or for doing code coverage runs.
+
+    Examples:
+
+    ```
+    build/jacoco-metric
+    ```
+
+    <br />
+    <br />
+
+    ##### <a href={'https://www.youtube.com/watch?v=BngtN4rUCYo'} style={{color: '#22539F'}}>E. Release</a>
+
+    ![Deployment](/img/branch-rules/ReleaseBranch.png)
+    
+    A branch for tagging a specific release version
+
+    Examples:
+
+    ```
+    release/myapp-1.01.123
+    ```
+
+    Git also supports tagging a specific commit history of the repository. A release branch is used if there is a need to make the code available for checkout or use.
+
+    <br />
+    <br />
+
+    ##### <a href={'https://www.youtube.com/watch?v=BngtN4rUCYo'} style={{color: '#22539F'}}>F. Merging</a>
+
+    A temporary branch for resolving merge conflicts, usually between the latest development and a feature or Hotfix branch. This can also be used if two branches of a feature being worked on by multiple developers need to be merged, verified and finalized.
+
+    Examples:
+    ```
+    merge/dev_lombok-refactoring
+    ```
+    ```
+    merge/combined-device-support   
+    ```
