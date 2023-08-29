@@ -1,0 +1,109 @@
+---
+sidebar_position: 4
+---
+
+import { Input } from "technotic";
+
+A checkBox is an input component which allows the user to wmake a binary choice. It is a GUI element that allows users to choose between true or false, and is an essential component of web forms used for a variety of purposes such as choosing gender, choosing major, choosing faculty, and many more.
+
+## Default CheckBox
+
+<Input.CheckBox/>
+
+To call technotic's CheckBox:
+
+```
+import { Input } from 'technotic';
+
+<Input.CheckBox/>
+```
+
+## CheckBox Customization
+
+### Size
+
+There are 3 sizes of CheckBox :
+
+- Small
+    <Input.CheckBox cbSize="small"/>
+
+```
+<Input.CheckBox 
+    cbSize="small"
+/>
+```
+
+- Medium (default)
+    <Input.CheckBox cbSize="medium"/>
+
+```
+<Input.CheckBox 
+    cbSize="medium"
+/>
+```
+
+- Large
+    <Input.CheckBox cbSize="large"/>
+
+```
+<Input.CheckBox 
+    cbSize="large"
+/>
+```
+
+### Type
+
+There are 2 types of CheckBox :
+
+- Primary (default)
+    <Input.CheckBox cbType="primary"/>
+
+```
+<Input.CheckBox 
+    cbType="primary"
+/>
+```
+
+- Secondary
+    <Input.CheckBox cbType="secondary"/>
+
+```
+<Input.CheckBox 
+    cbType="secondary"
+/>
+```
+
+### Font Size
+
+The font size of the checkbox label can be adjusted for readability. Our default font size is 24px
+
+<Input.CheckBox fontSize="medium" />
+<br />
+
+```
+<Input.CheckBox
+    fontSize='medium'
+/>
+```
+
+### Label Text
+
+Label text can be customized according to what information should be entered in a CheckBox.
+
+<Input.CheckBox
+  textLabel="Please input your message"
+/>
+<br />
+
+```
+<Input.CheckBox
+  textLabel="Please input your message"
+/>
+```
+
+
+
+
+
+
+
