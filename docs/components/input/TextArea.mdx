@@ -1,0 +1,67 @@
+---
+sidebar_position: 4
+---
+
+import { Input } from "technotic";
+
+A text area is an input component similar to a text field which allows the user to write text with an unlimited number of characters. It is a GUI element that allows users to enter and edit text, and is an essential component of web forms used for a variety of purposes such as writing comment or message, add description, address, and more.
+
+## Default Text Area
+
+<Input.TextArea/>
+
+
+To call technotic's text area:
+
+```
+import { Input } from 'technotic';
+
+<Input.TextArea/>
+```
+
+## Text Area Customization
+
+### Size
+
+There are 3 sizes of text area :
+
+- Small
+    <Input.TextArea txtAreaSize="small"/>
+
+```
+<Input.TextArea 
+    txtAreaSize="small"
+/>
+```
+
+- Medium (default)
+    <Input.TextArea txtAreaSize="medium"/>
+
+```
+<Input.TextArea 
+    txtAreaSize="medium"
+/>
+```
+
+- Large
+    <Input.TextArea txtAreaSize="large"/>
+```
+<Input.TextArea 
+    txtAreaSize="large"
+/>
+```
+
+### Placeholder Text
+
+Placeholder text can be customized according to what information should be entered in a text area.
+
+<Input.TextArea
+  placeholder="Please input your message"
+/>
+<br />
+
+```
+<Input.TextArea
+  placeholder="Please input your message"
+/>
+```
