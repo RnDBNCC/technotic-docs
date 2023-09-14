@@ -6,21 +6,14 @@ Navbar, short for "navigation bar," is a graphical user interface element that i
 
 The navbar typically appears at the top of the webpage or application and contains links or buttons that allow users to access different sections or pages of the site. It may also contain other elements, such as search boxes, login forms, or dropdown menus, depending on the needs of the website or application.
 
-## Import Navbar
+## Default Navbar
+The default Technotic Navbar
+<Navbar />
 
-To call technotic's Navbar component, you can use the following code:
-
+To call technotic's navbar:
 ```tsx
 import { Navbar } from "technotic";
 
-<Navbar/>
-```
-
-
-## Default Navbar
-<Navbar />
-
-```
 <Navbar/>
 ```
 
@@ -28,8 +21,8 @@ import { Navbar } from "technotic";
 
 Customize the navbar for your project by specifying the title, navigation links, and button links, each with their corresponding href attributes.
 
-### Navbar Title
-// import logo from "./img/image.png";
+### Title
+You can customize the title of the footer according to your website
 <Navbar
     title={<img  alt="logo" />}
 />
@@ -39,7 +32,8 @@ Customize the navbar for your project by specifying the title, navigation links,
     title={<img src="/image.png" alt="logo" />}
 />
 ```
-### Navbar Links
+### Links
+You have the flexibility to modify the navbar links title of the website as per your preferences.
 <Navbar
     navLinks={[
         { text: "Home", href: "/" },
@@ -61,6 +55,9 @@ Customize the navbar for your project by specifying the title, navigation links,
 ```
 
 ### Button Link
+
+The final customization option allows you to modify the button link
+
 <Navbar
     buttonLink={{ text: "Register", href: "/" }}
 />
@@ -71,7 +68,8 @@ Customize the navbar for your project by specifying the title, navigation links,
 />
 ```
 
-### Complete Navbar
+## Complete Navbar
+This is how a comprehensive navbar with customizable options looks like
 
 <Navbar
     title={<img src="/image.png" alt="logo" />}
