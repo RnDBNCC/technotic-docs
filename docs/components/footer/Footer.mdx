@@ -6,11 +6,13 @@ A footer is a section of a webpage that typically appears at the bottom of the p
 In addition to providing important information to users, the footer can also help to enhance the user experience by providing additional navigation options or quick access to commonly used features.
 
 ## Default Footer
-The default Technotic footer highlights the unique characteristics of BNCC through its colors and name
+The default Technotic Footer
 <Footer />
 
 To call technotic's footer:
-```
+```tsx
+import { Footer } from "technotic";
+
 <Footer/>
 ```
 
@@ -32,20 +34,58 @@ Apart from the footer color, you have the option to customize the color of the f
 <Footer fontColor="yellow"/>
 ```
 
-### Organization Name, Year and Creator
-You have the flexibility to modify the organization name, year, and creator of the website as per your preferences.
-<Footer 
-    name="BNCC"
-    year="2024"
-    createdBy="RnD BNCC 34"
-    />
+### Title, Description and Copyright
+You have the flexibility to modify the title, description and copyright of the website as per your preferences.
+<Footer
+    title={<img src="image.png" alt="logo" />}
+    description="Established in 1989, Bina Nusantara Computer Club (BNCC) is the oldest computer-based organization at BINUS University. We are a close-knit family of exceptional individuals who are passionately into technology and a commitment to professionalism."
+    copyrightText="Copyright © 2023 Bina Nusantara Computer Club. All rights reserved."
+/>
 
+```tsx
+<Footer
+    title={<img src="image.png" alt="logo" />}
+    description="Established in 1989, Bina Nusantara Computer Club (BNCC) is the oldest computer-based organization at BINUS University. We are a close-knit family of exceptional individuals who are passionately into technology and a commitment to professionalism."
+    copyrightText="Copyright © 2023 Bina Nusantara Computer Club. All rights reserved."
+/>
 ```
-<Footer 
-    name="BNCC"
-    year="2024"
-    createdBy="RnD BNCC 34"
-    />
+
+### Footer Links Title
+You have the flexibility to modify the footer links title of the website as per your preferences.
+<Footer
+    navLinksTitle1="Explore"
+    navLinks1={[
+        { text: "History", href: "/" },
+        { text: "About Us", href: "/" },
+        { text: "Structure", href: "/" },
+    ]}
+    navLinksTitle2="Products"
+    navLinks2={[
+        { text: "Filemagz", href: "/" },
+        { text: "FAVE Solution", href: "/" },
+        { text: "Learning & Training", href: "/" },
+    ]}
+    navLinksTitle3="Work with us"
+    navLinks3={[{ text: "Contact Us", href: "/" }]}
+/>
+
+```tsx
+<Footer
+    navLinksTitle1="Explore"
+    navLinks1={[
+        { text: "History", href: "/" },
+        { text: "About Us", href: "/" },
+        { text: "Structure", href: "/" },
+    ]}
+    navLinksTitle2="Products"
+    navLinks2={[
+        { text: "Filemagz", href: "/" },
+        { text: "FAVE Solution", href: "/" },
+        { text: "Learning & Training", href: "/" },
+    ]}
+    navLinksTitle3="Work with us"
+    navLinks3={[{ text: "Contact Us", href: "/" }]}
+/>
 ```
 
 ### Social Media
@@ -53,49 +93,109 @@ You can enhance the footer by adding social media integration. The available soc
 
 Note: The icons will be displayed by default when the corresponding social media links are provided.
 <Footer
-    instagramLink="https://www.instagram.com/bnccbinus/"
-    facebookLink="https://www.facebook.com/bina.nusantara.computer.club/"
-    twitterLink="https://twitter.com/bncc_binus"
-    linkedinLink="https://www.linkedin.com/company/bina-nusantara-computer-club/mycompany/"
-    youtubeLink="https://www.youtube.com/@binanusantaracomputerclub2771"
-/> 
+        socialMedia={{
+          facebook: {
+            username: "Facebook",
+            url: "https://www.facebook.com",
+          },
+          instagram: {
+            username: "Instagram",
+            url: "https://www.instagram.com",
+          },
+          linkedin: {
+            username: "LinkedIn",
+            url: "https://www.linkedin.com",
+          },
+        }}
+      />
 
-```
+```tsx
 <Footer
-    instagramLink="https://www.instagram.com/bnccbinus/"
-    facebookLink="https://www.facebook.com/bina.nusantara.computer.club/"
-    twitterLink="https://twitter.com/bncc_binus"
-    linkedinLink="https://www.linkedin.com/company/bina-nusantara-computer-club/mycompany/"
-    youtubeLink="https://www.youtube.com/@binanusantaracomputerclub2771"
-/> 
+    socialMedia={{
+        facebook: {
+        username: "Facebook",
+        url: "https://www.facebook.com",
+        },
+        instagram: {
+        username: "Instagram",
+        url: "https://www.instagram.com",
+        },
+        linkedin: {
+        username: "LinkedIn",
+        url: "https://www.linkedin.com",
+        },
+    }}
+/>
 ```
 
 ## Complete Footer
 This is how a comprehensive footer with customizable options looks like
 <Footer
-    name="BNCC"
-    year="2024"
-    createdBy="RnD BNCC 34"
-    bgColor="darkSlateBlue"
-    fontColor="white"
-    instagramLink="https://www.instagram.com/bnccbinus/"
-    facebookLink="https://www.facebook.com/bina.nusantara.computer.club/"
-    twitterLink="https://twitter.com/bncc_binus"
-    linkedinLink="https://www.linkedin.com/company/bina-nusantara-computer-club/mycompany/"
-    youtubeLink="https://www.youtube.com/@binanusantaracomputerclub2771"
-/> 
+        title={<img src="image.png" alt="logo" />}
+        description="Established in 1989, Bina Nusantara Computer Club (BNCC) is the oldest computer-based organization at BINUS University. We are a close-knit family of exceptional individuals who are passionately into technology and a commitment to professionalism."
+        copyrightText="Copyright © 2023 Bina Nusantara Computer Club. All rights reserved."
+        socialMedia={{
+          facebook: {
+            username: "Facebook",
+            url: "https://www.facebook.com",
+          },
+          instagram: {
+            username: "Instagram",
+            url: "https://www.instagram.com",
+          },
+          linkedin: {
+            username: "LinkedIn",
+            url: "https://www.linkedin.com",
+          },
+        }}
+        navLinksTitle1="Explore"
+        navLinks1={[
+          { text: "History", href: "/" },
+          { text: "About Us", href: "/" },
+          { text: "Structure", href: "/" },
+        ]}
+        navLinksTitle2="Products"
+        navLinks2={[
+          { text: "Filemagz", href: "/" },
+          { text: "FAVE Solution", href: "/" },
+          { text: "Learning & Training", href: "/" },
+        ]}
+        navLinksTitle3="Work with us"
+        navLinks3={[{ text: "Contact Us", href: "/" }]}
+      />
 
-```
+``` tsx
 <Footer
-    name="BNCC"
-    year="2024"
-    createdBy="RnD BNCC 34"
-    bgColor="darkSlateBlue"
-    fontColor="white"
-    instagramLink="https://www.instagram.com/bnccbinus/"
-    facebookLink="https://www.facebook.com/bina.nusantara.computer.club/"
-    twitterLink="https://twitter.com/bncc_binus"
-    linkedinLink="https://www.linkedin.com/company/bina-nusantara-computer-club/mycompany/"
-    youtubeLink="https://www.youtube.com/@binanusantaracomputerclub2771"
-/> 
+    title={<img src="image.png" alt="logo" />}
+    description="Established in 1989, Bina Nusantara Computer Club (BNCC) is the oldest computer-based organization at BINUS University. We are a close-knit family of exceptional individuals who are passionately into technology and a commitment to professionalism."
+    copyrightText="Copyright © 2023 Bina Nusantara Computer Club. All rights reserved."
+    socialMedia={{
+        facebook: {
+        username: "Facebook",
+        url: "https://www.facebook.com",
+        },
+        instagram: {
+        username: "Instagram",
+        url: "https://www.instagram.com",
+        },
+        linkedin: {
+        username: "LinkedIn",
+        url: "https://www.linkedin.com",
+        },
+    }}
+    navLinksTitle1="Explore"
+    navLinks1={[
+        { text: "History", href: "/" },
+        { text: "About Us", href: "/" },
+        { text: "Structure", href: "/" },
+    ]}
+    navLinksTitle2="Products"
+    navLinks2={[
+        { text: "Filemagz", href: "/" },
+        { text: "FAVE Solution", href: "/" },
+        { text: "Learning & Training", href: "/" },
+    ]}
+    navLinksTitle3="Work with us"
+    navLinks3={[{ text: "Contact Us", href: "/" }]}
+/>
 ```
