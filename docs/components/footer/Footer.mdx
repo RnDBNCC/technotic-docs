@@ -36,10 +36,10 @@ Apart from the footer color, you have the option to customize the color of the f
 
 ### Title, Description and Copyright
 You have the flexibility to modify the title, description and copyright of the website as per your preferences.
-<Footer
-    title={<img src="image.png" alt="logo" />}
-    description="Established in 1989, Bina Nusantara Computer Club (BNCC) is the oldest computer-based organization at BINUS University. We are a close-knit family of exceptional individuals who are passionately into technology and a commitment to professionalism."
-    copyrightText="Copyright © 2023 Bina Nusantara Computer Club. All rights reserved."
+
+import FooterTitle from "@site/src/components/DemoComponents/FooterTitle";
+
+<FooterTitle
 />
 
 ```tsx
@@ -130,39 +130,11 @@ Note: The icons will be displayed by default when the corresponding social media
 
 ## Complete Footer
 This is how a comprehensive footer with customizable options looks like
-<Footer
-        title={<img src="image.png" alt="logo" />}
-        description="Established in 1989, Bina Nusantara Computer Club (BNCC) is the oldest computer-based organization at BINUS University. We are a close-knit family of exceptional individuals who are passionately into technology and a commitment to professionalism."
-        copyrightText="Copyright © 2023 Bina Nusantara Computer Club. All rights reserved."
-        socialMedia={{
-          facebook: {
-            username: "Facebook",
-            url: "https://www.facebook.com",
-          },
-          instagram: {
-            username: "Instagram",
-            url: "https://www.instagram.com",
-          },
-          linkedin: {
-            username: "LinkedIn",
-            url: "https://www.linkedin.com",
-          },
-        }}
-        navLinksTitle1="Explore"
-        navLinks1={[
-          { text: "History", href: "/" },
-          { text: "About Us", href: "/" },
-          { text: "Structure", href: "/" },
-        ]}
-        navLinksTitle2="Products"
-        navLinks2={[
-          { text: "Filemagz", href: "/" },
-          { text: "FAVE Solution", href: "/" },
-          { text: "Learning & Training", href: "/" },
-        ]}
-        navLinksTitle3="Work with us"
-        navLinks3={[{ text: "Contact Us", href: "/" }]}
-      />
+
+import FooterFullCustom from "@site/src/components/DemoComponents/FooterFullCustom";
+
+<FooterFullCustom
+/>
 
 ``` tsx
 <Footer
