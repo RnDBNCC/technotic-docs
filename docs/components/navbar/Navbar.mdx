@@ -1,6 +1,4 @@
-
 import { Navbar } from "technotic";
-
 
 Navbar, short for "navigation bar," is a graphical user interface element that is commonly used in websites and applications to provide users with a way to navigate the different sections or pages of a website or application.
 
@@ -21,10 +19,12 @@ import { Navbar } from "technotic";
 
 Customize the navbar for your project by specifying the title, navigation links, and button links, each with their corresponding href attributes.
 
-### Title
-You can customize the title of the footer according to your website
-<Navbar
-    title={<img  alt="logo" />}
+### Title / Logo
+You can customize the title or logo of the navbar according to your website
+
+import NavbarTitle from "@site/src/components/DemoComponents/NavbarTitle";
+
+<NavbarTitle
 />
 
 ```tsx
@@ -71,15 +71,10 @@ The final customization option allows you to modify the button link
 ## Complete Navbar
 This is how a comprehensive navbar with customizable options looks like
 
-<Navbar
-    title={<img src="/image.png" alt="logo" />}
-    navLinks={[
-        { text: "Home", href: "/" },
-        { text: "About Us", href: "/about-us" },
-        { text: "Products", href: "/products" },
-        { text: "Event", href: "/events" },
-    ]}
-    buttonLink={{ text: "Contact Us", href: "/contact" }}
+
+import NavbarFullCustom from "@site/src/components/DemoComponents/NavbarFullCustom";
+
+<NavbarFullCustom
 />
 
 ```tsx
@@ -87,7 +82,6 @@ This is how a comprehensive navbar with customizable options looks like
     title={<img src="/image.png" alt="logo" />}
     navLinks={[
         { text: "Home", href: "/" },
-        { text: "About Us", href: "/about-us" },
         { text: "Products", href: "/products" },
         { text: "Event", href: "/events" },
     ]}
