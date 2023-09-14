@@ -1,0 +1,98 @@
+
+import { Navbar } from "technotic";
+
+
+Navbar, short for "navigation bar," is a graphical user interface element that is commonly used in websites and applications to provide users with a way to navigate the different sections or pages of a website or application.
+
+The navbar typically appears at the top of the webpage or application and contains links or buttons that allow users to access different sections or pages of the site. It may also contain other elements, such as search boxes, login forms, or dropdown menus, depending on the needs of the website or application.
+
+## Import Navbar
+
+To call technotic's Navbar component, you can use the following code:
+
+```tsx
+import { Navbar } from "technotic";
+
+<Navbar/>
+```
+
+
+## Default Navbar
+<Navbar />
+
+```
+<Navbar/>
+```
+
+## Navbar Customization
+
+Customize the navbar for your project by specifying the title, navigation links, and button links, each with their corresponding href attributes.
+
+### Navbar Title
+// import logo from "./img/image.png";
+<Navbar
+    title={<img  alt="logo" />}
+/>
+
+```tsx
+<Navbar
+    title={<img src="/image.png" alt="logo" />}
+/>
+```
+### Navbar Links
+<Navbar
+    navLinks={[
+        { text: "Home", href: "/" },
+        { text: "About Us", href: "/about-us" },
+        { text: "Products", href: "/products" },
+        { text: "Event", href: "/events" },
+    ]}
+/>
+
+```tsx
+<Navbar
+    navLinks={[
+        { text: "Home", href: "/" },
+        { text: "About Us", href: "/about-us" },
+        { text: "Products", href: "/products" },
+        { text: "Event", href: "/events" },
+    ]}
+/>
+```
+
+### Button Link
+<Navbar
+    buttonLink={{ text: "Register", href: "/" }}
+/>
+
+```tsx
+<Navbar
+    buttonLink={{ text: "Register", href: "/" }}
+/>
+```
+
+### Complete Navbar
+
+<Navbar
+    title={<img src="/image.png" alt="logo" />}
+    navLinks={[
+        { text: "Home", href: "/" },
+        { text: "About Us", href: "/about-us" },
+        { text: "Products", href: "/products" },
+        { text: "Event", href: "/events" },
+    ]}
+    buttonLink={{ text: "Contact Us", href: "/contact" }}
+/>
+
+```tsx
+<Navbar
+    title={<img src="/image.png" alt="logo" />}
+    navLinks={[
+        { text: "Home", href: "/" },
+        { text: "About Us", href: "/about-us" },
+        { text: "Products", href: "/products" },
+        { text: "Event", href: "/events" },
+    ]}
+    buttonLink={{ text: "Contact Us", href: "/contact" }}
+/>
+```
