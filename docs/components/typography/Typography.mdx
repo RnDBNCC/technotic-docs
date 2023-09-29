@@ -3,347 +3,263 @@ import { Typography as Text, ColorSystem } from "technotic";
 Typography is the art of positioning letters and text so that the reader can easily read, understand, and find the material visually pleasing.
 
 ## How To Use
-<ul style={{listStyleType: "circle"}}>
-    <li>Technotic use Montserrat as Heading and Poppins as Paragraph for default Font Family</li>
+
+<ul style={{ listStyleType: "circle" }}>
+    <li>
+        Technotic use Montserrat as Heading and Poppins as Paragraph for default
+        Font Family
+    </li>
     <li>Import font url in .css file</li>
     <li>Import Typography from technotic's NPM</li>
 </ul>
 
 ### Import URL for CSS
+
 ```
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 ```
 
 ### Import Typography
+
 ```
 import { Typography } from 'technotic';
 ```
 
 ## Example
+
 <div style={{
     border: "2px solid #F6F7F8",
     borderRadius: "12px",
+    padding: "20px",
 }}>
-    <Text
-        weight="bold"
-        size="heading-1"
-        label="Introduction"
-    />
-    <Text
-        weight="medium"
-        size="paragraph-5"
-        label="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet tellus tincidunt varius pharetra. Phasellus odio nibh, fringilla eu molestie eget, rhoncus ac odio. Donec quis odio convallis velit commodo dapibus vitae eu turpis. Sed quis condimentum urna. Pellentesque tristique, mi in dictum rhoncus, diam ipsum hendrerit purus, gravida pretium erat lacus a nunc. Maecenas id purus tempor, hendrerit sem vitae, tempor tortor. Curabitur nec mauris ac neque vestibulum molestie. Nullam condimentum, metus at sodales sagittis, orci eros volutpat orci, at scelerisque risus turpis ac ligula. Morbi quis turpis ut nisl laoreet placerat."
-    />
+    <Text weight="bold" size="heading-1">Introduction</Text>
+    <Text weight="medium" size="paragraph-5">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet tellus tincidunt varius pharetra. Phasellus odio nibh, fringilla eu molestie eget, rhoncus ac odio. Donec quis odio convallis velit commodo dapibus vitae eu turpis. Sed quis condimentum urna. Pellentesque tristique, mi in dictum rhoncus, diam ipsum hendrerit purus, gravida pretium erat lacus a nunc. Maecenas id purus tempor, hendrerit sem vitae, tempor tortor. Curabitur nec mauris ac neque vestibulum molestie. Nullam condimentum, metus at sodales sagittis, orci eros volutpat orci, at scelerisque risus turpis ac ligula. Morbi quis turpis ut nisl laoreet placerat.
+    </Text>
     <br />
-    <Text
-        weight="medium"
-        size="paragraph-5"
-        label="Cras ultrices eros ex, vel condimentum dui dapibus id. Donec nunc urna, elementum sed pellentesque eu, aliquet eu tellus. Vestibulum tincidunt nulla tristique ante facilisis, vel ornare leo blandit. Donec ut massa justo. Aliquam sed metus tortor. Proin commodo elit sed odio laoreet, sit amet mollis velit efficitur. Nulla facilisi. Quisque ultrices pretium sapien, in finibus sapien molestie sit amet. Quisque pretium quam in ante fermentum, ac laoreet lacus sodales. Donec gravida neque at sapien porttitor maximus. Aliquam non justo eget urna ultrices cursus ac quis quam. Curabitur interdum porttitor pharetra."
-    />
+    <Text weight="medium" size="paragraph-5">
+        Cras ultrices eros ex, vel condimentum dui dapibus id. Donec nunc urna, elementum sed pellentesque eu, aliquet eu tellus. Vestibulum tincidunt nulla tristique ante facilisis, vel ornare leo blandit. Donec ut massa justo. Aliquam sed metus tortor. Proin commodo elit sed odio laoreet, sit amet mollis velit efficitur. Nulla facilisi. Quisque ultrices pretium sapien, in finibus sapien molestie sit amet. Quisque pretium quam in ante fermentum, ac laoreet lacus sodales. Donec gravida neque at sapien porttitor maximus. Aliquam non justo eget urna ultrices cursus ac quis quam. Curabitur interdum porttitor pharetra.
+    </Text>
     <br />
-    <Text
-        weight="bold"
-        size="paragraph-5"
-        label="Sed nisl quam, hendrerit id congue vel, euismod et arcu. Proin dictum eros non lorem viverra, sit amet rhoncus purus ullamcorper. Integer sed diam vel sapien tristique lacinia."
-    />
+    <Text weight="bold" size="paragraph-5">
+        Sed nisl quam, hendrerit id congue vel, euismod et arcu. Proin dictum eros non lorem viverra, sit amet rhoncus purus ullamcorper. Integer sed diam vel sapien tristique lacinia.
+    </Text>
+
     <ul style={{listStyleType: "circle"}}>
-    <li>
-        <Text
-            weight="medium"
-            size="paragraph-5"
-            label="Lorem"
-            color={ColorSystem.BLUE500}
-        />
-    </li>
-    <li>
-        <Text
-            weight="medium"
-            size="paragraph-5"
-            label="Ipsum"
-            color={ColorSystem.BLUE500}
-        />
-    </li>
-    <li>
-        <Text
-            weight="medium"
-            size="paragraph-5"
-            label="Test"
-            color={ColorSystem.BLUE500}
-        />
-    </li>
-</ul>
+        <li>
+            <Text weight="medium" size="paragraph-5" color={ColorSystem.BLUE500}>
+                Lorem
+            </Text>
+        </li>
+        <li>
+            <Text weight="medium" size="paragraph-5" color={ColorSystem.BLUE500}>
+                Ipsum
+            </Text>
+        </li>
+        <li>
+            <Text weight="medium" size="paragraph-5" color={ColorSystem.BLUE500}>
+                Test
+            </Text>
+        </li>
+    </ul>
 </div>
 
 #### Source code
+
 ```
 import { Typography as Text, ColorSystem } from "technotic";
 
 const { BLUE500 } = ColorSystem;
 
-<Text
-    weight="bold"
-    size="heading-1"
-    label="Introduction"
-/>
-<Text
-    weight="medium"
-    size="paragraph-5"
-    label="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet tellus tincidunt varius pharetra. Phasellus odio nibh, fringilla eu molestie eget, rhoncus ac odio. Donec quis odio convallis velit commodo dapibus vitae eu turpis. Sed quis condimentum urna. Pellentesque tristique, mi in dictum rhoncus, diam ipsum hendrerit purus, gravida pretium erat lacus a nunc. Maecenas id purus tempor, hendrerit sem vitae, tempor tortor. Curabitur nec mauris ac neque vestibulum molestie. Nullam condimentum, metus at sodales sagittis, orci eros volutpat orci, at scelerisque risus turpis ac ligula. Morbi quis turpis ut nisl laoreet placerat."
-/>
-<br />
-<Text
-    weight="medium"
-    size="paragraph-5"
-    label="Cras ultrices eros ex, vel condimentum dui dapibus id. Donec nunc urna, elementum sed pellentesque eu, aliquet eu tellus. Vestibulum tincidunt nulla tristique ante facilisis, vel ornare leo blandit. Donec ut massa justo. Aliquam sed metus tortor. Proin commodo elit sed odio laoreet, sit amet mollis velit efficitur. Nulla facilisi. Quisque ultrices pretium sapien, in finibus sapien molestie sit amet. Quisque pretium quam in ante fermentum, ac laoreet lacus sodales. Donec gravida neque at sapien porttitor maximus. Aliquam non justo eget urna ultrices cursus ac quis quam. Curabitur interdum porttitor pharetra."
-/>
-<br />
-<Text
-    weight="bold"
-    size="paragraph-5"
-    label="Sed nisl quam, hendrerit id congue vel, euismod et arcu. Proin dictum eros non lorem viverra, sit amet rhoncus purus ullamcorper. Integer sed diam vel sapien tristique lacinia."
-/>
-<ul style={{listStyleType: "circle"}}>
-    <li>
-        <Text
-            weight="medium"
-            size="paragraph-5"
-            label="Lorem"
-            color={BLUE500}
-        />
-    </li>
-    <li>
-        <Text
-            weight="medium"
-            size="paragraph-5"
-            label="Ipsum"
-            color={BLUE500}
-        />
-    </li>
-    <li>
-        <Text
-            weight="medium"
-            size="paragraph-5"
-            label="Test"
-            color={BLUE500}
-        />
-    </li>
-</ul>
+    <Text weight="bold" size="heading-1">Introduction</Text>
+
+    <Text weight="medium" size="paragraph-5">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet tellus tincidunt varius pharetra. Phasellus odio nibh, fringilla eu molestie eget, rhoncus ac odio. Donec quis odio convallis velit commodo dapibus vitae eu turpis. Sed quis condimentum urna. Pellentesque tristique, mi in dictum rhoncus, diam ipsum hendrerit purus, gravida pretium erat lacus a nunc. Maecenas id purus tempor, hendrerit sem vitae, tempor tortor. Curabitur nec mauris ac neque vestibulum molestie. Nullam condimentum, metus at sodales sagittis, orci eros volutpat orci, at scelerisque risus turpis ac ligula. Morbi quis turpis ut nisl laoreet placerat.
+    </Text>
+
+    <Text weight="medium" size="paragraph-5">
+        Cras ultrices eros ex, vel condimentum dui dapibus id. Donec nunc urna, elementum sed pellentesque eu, aliquet eu tellus. Vestibulum tincidunt nulla tristique ante facilisis, vel ornare leo blandit. Donec ut massa justo. Aliquam sed metus tortor. Proin commodo elit sed odio laoreet, sit amet mollis velit efficitur. Nulla facilisi. Quisque ultrices pretium sapien, in finibus sapien molestie sit amet. Quisque pretium quam in ante fermentum, ac laoreet lacus sodales. Donec gravida neque at sapien porttitor maximus. Aliquam non justo eget urna ultrices cursus ac quis quam. Curabitur interdum porttitor pharetra.
+    </Text>
+
+    <Text weight="bold" size="paragraph-5">
+        Sed nisl quam, hendrerit id congue vel, euismod et arcu. Proin dictum eros non lorem viverra, sit amet rhoncus purus ullamcorper. Integer sed diam vel sapien tristique lacinia.
+    </Text>
+
+    <ul style={{listStyleType: "circle"}}>
+        <li>
+            <Text weight="medium" size="paragraph-5" color={ColorSystem.BLUE500}>
+                Lorem
+            </Text>
+        </li>
+        <li>
+            <Text weight="medium" size="paragraph-5" color={ColorSystem.BLUE500}>
+                Ipsum
+            </Text>
+        </li>
+        <li>
+            <Text weight="medium" size="paragraph-5" color={ColorSystem.BLUE500}>
+                Test
+            </Text>
+        </li>
+    </ul>
 ```
 
-<div style={{
-    border: "2px solid #F6F7F8",
-    borderRadius: "12px",
-    marginTop: "30px",
-    paddingLeft: "20px",
-    paddingBottom: "20px",
-}}>
-    <Text
-        weight="bold"
-        size="heading-1"
-        label="heading-1. Technotic"
-    />
+<div
+    style={{
+        border: "2px solid #F6F7F8",
+        borderRadius: "12px",
+        marginTop: "30px",
+        paddingLeft: "20px",
+        paddingBottom: "20px",
+    }}
+>
+    <Text weight="bold" size="heading-1">
+        heading-1. Technotic
+    </Text>
     <br />
-    <Text
-        weight="bold"
-        size="heading-2"
-        label="heading-2. Technotic"
-    />
+    <Text weight="bold" size="heading-2">
+        heading-2. Technotic
+    </Text>
     <br />
-    <Text
-        weight="bold"
-        size="heading-3"
-        label="heading-3. Technotic"
-    />
+    <Text weight="bold" size="heading-3">
+        heading-3. Technotic
+    </Text>
     <br />
-    <Text
-        weight="bold"
-        size="heading-4"
-        label="heading-4. Technotic"
-    />
+    <Text weight="bold" size="heading-4">
+        heading-4. Technotic
+    </Text>
     <br />
-    <Text
-        weight="bold"
-        size="heading-5"
-        label="heading-5. Technotic"
-    />
+    <Text weight="bold" size="heading-5">
+        heading-5. Technotic
+    </Text>
     <br />
-    <Text
-        weight="bold"
-        size="heading-6"
-        label="heading-6. Technotic"
-    />
+    <Text weight="bold" size="heading-6">
+        heading-6. Technotic
+    </Text>
     <br />
-    <Text
-        weight="bold"
-        size="heading-7"
-        label="heading-7. Technotic"
-    />
+    <Text weight="bold" size="heading-7">
+        heading-7. Technotic
+    </Text>
     <br />
-    <Text
-        weight="bold"
-        size="heading-8"
-        label="heading-8. Technotic"
-    />
+    <Text weight="bold" size="heading-8">
+        heading-8. Technotic
+    </Text>
 </div>
 
 #### Source code
+
 ```
 import { Typography as Text } from 'technotic';
 
-<Text
-    weight="bold"
-    size="heading-1"
-    label="heading-1. Technotic"
-/>
+    <Text weight="bold" size="heading-1">
+        heading-1. Technotic
+    </Text>
 
-<Text
-    weight="bold"
-    size="heading-2"
-    label="heading-2. Technotic"
-/>
+    <Text weight="bold" size="heading-2">
+        heading-2. Technotic
+    </Text>
 
-<Text
-    weight="bold"
-    size="heading-3"
-    label="heading-3. Technotic"
-/>
+    <Text weight="bold" size="heading-3">
+        heading-3. Technotic
+    </Text>
 
-<Text
-    weight="bold"
-    size="heading-4"
-    label="heading-4. Technotic"
-/>
+    <Text weight="bold" size="heading-4">
+        heading-4. Technotic
+    </Text>
 
-<Text
-    weight="bold"
-    size="heading-5"
-    label="heading-5. Technotic"
-/>
+    <Text weight="bold" size="heading-5">
+        heading-5. Technotic
+    </Text>
 
-<Text
-    weight="bold"
-    size="heading-6"
-    label="heading-6. Technotic"
-/>
+    <Text weight="bold" size="heading-6">
+        heading-6. Technotic
+    </Text>
 
-<Text
-    weight="bold"
-    size="heading-7"
-    label="heading-7. Technotic"
-/>
+    <Text weight="bold" size="heading-7">
+        heading-7. Technotic
+    </Text>
 
-<Text
-    weight="bold"
-    size="heading-8"
-    label="heading-8. Technotic"
-/>
+    <Text weight="bold" size="heading-8">
+        heading-8. Technotic
+    </Text>
 ```
 
-<div style={{
-    border: "2px solid #F6F7F8",
-    borderRadius: "12px",
-    marginTop: "30px",
-    paddingLeft: "20px",
-    paddingBottom: "20px",
-}}>
-    <Text
-        weight="regular"
-        size="paragraph-1"
-        label="paragraph-1. Technotic"
-    />
+<div
+    style={{
+        border: "2px solid #F6F7F8",
+        borderRadius: "12px",
+        marginTop: "30px",
+        paddingLeft: "20px",
+        paddingBottom: "20px",
+    }}
+>
+    <Text weight="regular" size="paragraph-1">
+        paragraph-1. Technotic
+    </Text>
     <br />
-    <Text
-        weight="regular"
-        size="paragraph-2"
-        label="paragraph-2. Technotic"
-    />
+    <Text weight="regular" size="paragraph-2">
+        paragraph-2. Technotic
+    </Text>
     <br />
-    <Text
-        weight="regular"
-        size="paragraph-3"
-        label="paragraph-3. Technotic"
-    />
+    <Text weight="regular" size="paragraph-3">
+        paragraph-3. Technotic
+    </Text>
     <br />
-    <Text
-        weight="regular"
-        size="paragraph-4"
-        label="paragraph-4. Technotic"
-    />
+    <Text weight="regular" size="paragraph-4">
+        paragraph-4. Technotic
+    </Text>
     <br />
-    <Text
-        weight="regular"
-        size="paragraph-5"
-        label="paragraph-5. Technotic"
-    />
+    <Text weight="regular" size="paragraph-5">
+        paragraph-5. Technotic
+    </Text>
     <br />
-    <Text
-        weight="regular"
-        size="paragraph-6"
-        label="paragraph-6. Technotic"
-    />
+    <Text weight="regular" size="paragraph-6">
+        paragraph-6. Technotic
+    </Text>
     <br />
-    <Text
-        weight="regular"
-        size="paragraph-7"
-        label="paragraph-7. Technotic"
-    />
+    <Text weight="regular" size="paragraph-7">
+        paragraph-7. Technotic
+    </Text>
     <br />
-    <Text
-        weight="regular"
-        size="paragraph-8"
-        label="paragraph-8. Technotic"
-    />
+    <Text weight="regular" size="paragraph-8">
+        paragraph-8. Technotic
+    </Text>
 </div>
 
 #### Source code
+
 ```
 import { Typography as Text } from 'technotic';
 
-<Text
-    weight="regular"
-    size="paragraph-1"
-    label="paragraph-1. Technotic"
-/>
+    <Text weight="regular" size="paragraph-1">
+        paragraph-1. Technotic
+    </Text>
 
-<Text
-    weight="regular"
-    size="paragraph-2"
-    label="paragraph-2. Technotic"
-/>
+    <Text weight="regular" size="paragraph-2">
+        paragraph-2. Technotic
+    </Text>
 
-<Text
-    weight="regular"
-    size="paragraph-3"
-    label="paragraph-3. Technotic"
-/>
+    <Text weight="regular" size="paragraph-3">
+        paragraph-3. Technotic
+    </Text>
 
-<Text
-    weight="regular"
-    size="paragraph-4"
-    label="paragraph-4. Technotic"
-/>
+    <Text weight="regular" size="paragraph-4">
+        paragraph-4. Technotic
+    </Text>
 
-<Text
-    weight="regular"
-    size="paragraph-5"
-    label="paragraph-5. Technotic"
-/>
+    <Text weight="regular" size="paragraph-5">
+        paragraph-5. Technotic
+    </Text>
 
-<Text
-    weight="regular"
-    size="paragraph-6"
-    label="paragraph-6. Technotic"
-/>
+    <Text weight="regular" size="paragraph-6">
+        paragraph-6. Technotic
+    </Text>
 
-<Text
-    weight="regular"
-    size="paragraph-7"
-    label="paragraph-7. Technotic"
-/>
+    <Text weight="regular" size="paragraph-7">
+        paragraph-7. Technotic
+    </Text>
 
-<Text
-    weight="regular"
-    size="paragraph-8"
-    label="paragraph-8. Technotic"
-/>
+    <Text weight="regular" size="paragraph-8">
+        paragraph-8. Technotic
+    </Text>
 ```
