@@ -1,18 +1,22 @@
 import { Navbar } from "technotic";
+import BrowserOnly from "@docusaurus/BrowserOnly";
 
 Navbar, short for "navigation bar," is a graphical user interface element that is commonly used in websites and applications to provide users with a way to navigate the different sections or pages of a website or application.
 
 The navbar typically appears at the top of the webpage or application and contains links or buttons that allow users to access different sections or pages of the site. It may also contain other elements, such as search boxes, login forms, or dropdown menus, depending on the needs of the website or application.
 
 ## Default Navbar
+
 The default Technotic Navbar
-<Navbar />
+
+<BrowserOnly>{() => <Navbar />}</BrowserOnly>
 
 To call technotic's navbar:
+
 ```tsx
 import { Navbar } from "technotic";
 
-<Navbar/>
+<Navbar />;
 ```
 
 ## Navbar Customization
@@ -20,28 +24,33 @@ import { Navbar } from "technotic";
 Customize the navbar for your project by specifying the title, navigation links, and button links, each with their corresponding href attributes.
 
 ### Title / Logo
+
 You can customize the title or logo of the navbar according to your website
 
 import NavbarTitle from "@site/src/components/DemoComponents/NavbarTitle";
 
-<NavbarTitle
-/>
+<BrowserOnly>{() => <NavbarTitle />}</BrowserOnly>
 
 ```tsx
-<Navbar
-    title={<img src="/image.png" alt="logo" />}
-/>
+<Navbar title={<img src="/image.png" alt="logo" />} />
 ```
+
 ### Links
+
 You have the flexibility to modify the navbar links title of the website as per your preferences.
-<Navbar
-    navLinks={[
-        { text: "Home", href: "/" },
-        { text: "About Us", href: "/about-us" },
-        { text: "Products", href: "/products" },
-        { text: "Event", href: "/events" },
-    ]}
-/>
+
+<BrowserOnly>
+    {() => (
+        <Navbar
+            navLinks={[
+                { text: "Home", href: "/" },
+                { text: "About Us", href: "/about-us" },
+                { text: "Products", href: "/products" },
+                { text: "Event", href: "/events" },
+            ]}
+        />
+    )}
+</BrowserOnly>
 
 ```tsx
 <Navbar
@@ -58,24 +67,21 @@ You have the flexibility to modify the navbar links title of the website as per 
 
 The final customization option allows you to modify the button link
 
-<Navbar
-    buttonLink={{ text: "Register", href: "/" }}
-/>
+<BrowserOnly>
+    {() => <Navbar buttonLink={{ text: "Register", href: "/" }} />}
+</BrowserOnly>
 
 ```tsx
-<Navbar
-    buttonLink={{ text: "Register", href: "/" }}
-/>
+<Navbar buttonLink={{ text: "Register", href: "/" }} />
 ```
 
 ## Complete Navbar
-This is how a comprehensive navbar with customizable options looks like
 
+This is how a comprehensive navbar with customizable options looks like
 
 import NavbarFullCustom from "@site/src/components/DemoComponents/NavbarFullCustom";
 
-<NavbarFullCustom
-/>
+<BrowserOnly>{() => <NavbarFullCustom />}</BrowserOnly>
 
 ```tsx
 <Navbar
