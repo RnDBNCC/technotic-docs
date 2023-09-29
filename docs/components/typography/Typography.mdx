@@ -15,13 +15,13 @@ Typography is the art of positioning letters and text so that the reader can eas
 
 ### Import URL for CSS
 
-```
+```css
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 ```
 
 ### Import Typography
 
-```
+```tsx
 import { Typography } from 'technotic';
 ```
 
@@ -44,7 +44,6 @@ import { Typography } from 'technotic';
     <Text weight="bold" size="paragraph-5">
         Sed nisl quam, hendrerit id congue vel, euismod et arcu. Proin dictum eros non lorem viverra, sit amet rhoncus purus ullamcorper. Integer sed diam vel sapien tristique lacinia.
     </Text>
-
     <ul style={{listStyleType: "circle"}}>
         <li>
             <Text weight="medium" size="paragraph-5" color={ColorSystem.BLUE500}>
@@ -66,7 +65,7 @@ import { Typography } from 'technotic';
 
 #### Source code
 
-```
+```tsx
 import { Typography as Text, ColorSystem } from "technotic";
 
 const { BLUE500 } = ColorSystem;
@@ -148,7 +147,7 @@ const { BLUE500 } = ColorSystem;
 
 #### Source code
 
-```
+```tsx
 import { Typography as Text } from 'technotic';
 
     <Text weight="bold" size="heading-1">
@@ -228,7 +227,7 @@ import { Typography as Text } from 'technotic';
 
 #### Source code
 
-```
+```tsx
 import { Typography as Text } from 'technotic';
 
     <Text weight="regular" size="paragraph-1">
