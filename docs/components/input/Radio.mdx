@@ -1,0 +1,238 @@
+---
+sidebar_position: 4
+---
+
+import { Input } from "technotic";
+import { onChange } from "./utils/RadioUtils.js";
+
+<br/>
+
+## Introduction
+
+The radio input component is a fundamental user interface element in web development. Unlike checkboxes, radio inputs allow users to **select a single option from a set of choices, often used in forms, surveys, or settings** where mutually exclusive options are presented.
+
+A radio input is represented by a small, circular button accompanied by a label, indicating the available options. When a user selects one radio button within a group, it automatically deselects any other options in the same group, ensuring only one choice is active at a time.
+
+In the context of a design system, the radio input component follows a set of standardized styles, ensuring consistency and alignment with the overall visual language of a website or application. These styles encompass various aspects, including size, color, and spacing, allowing for customization to fit specific design requirements.
+
+Radio input components are versatile and can be employed for a variety of purposes, such as selecting preferences, filtering data, or making choices in a step-by-step process. Their clear visual representation and inherent interactivity contribute to an intuitive user interface, enhancing the overall user experience.
+
+<br/>
+
+## Import Radio Input
+To call technotic's Radio component, you can use the following code:
+
+```tsx
+import { Input } from 'technotic';
+
+<Input.Radio>[Attributes Single input Radiio]</Input.Radio>
+```
+
+<br/>
+
+## Default Input Radio Usage
+
+<Input.Radio
+    name="radio"
+    onChange={onChange}
+    value="apple pie"
+    radiioType="secondary"
+>[Attributes Single input Radio]</Input.Radio>
+
+value: <p id="default-radio" style={{color: "red"}}></p>
+
+<br/>
+
+```tsx
+const onChange = (value) => {
+    console.log(value);
+};
+
+<Input.Radio
+    name="radio"
+    onChange={onChange}
+    value="apple pie"
+    radiioType="secondary"
+>[Attributes Single input Radio]</Input.Radio>
+```
+
+<br/>
+
+## Button Customization
+
+### Button Size
+
+There are 3 sizes of BNCC Button, which are:
+
+- small
+
+    <Button btnSize="small">Small</Button>
+```tsx
+<Button btnSize="small">
+    Small
+</Button>
+```
+
+- medium
+
+    <Button btnSize="medium">Medium</Button>
+```tsx
+<Button btnSize="medium">
+    Medium
+</Button>
+```
+
+- large
+
+    <Button btnSize="large">Large</Button>
+```tsx
+<Button btnSize="large">
+    Large
+</Button>
+```
+
+<br/>
+
+### Button type
+
+There are 4 type of BNCC Button, which are:
+
+- primary
+
+    <Button btnType="primary">Primary</Button>
+```tsx
+<Button btnType="primary">
+    Primary
+</Button>
+```
+
+- secondary
+
+    <Button btnType="secondary">Secondary</Button>
+```tsx
+<Button btnType="secondary">
+    Secondary
+</Button>
+```
+
+- link
+
+    <Button btnType="link" btnColor={'blue'}>Link</Button>
+```tsx
+<Button btnType="link">
+    Link
+</Button>
+```
+
+- disabled
+
+    1. Primary
+    <Button btnType="primary" disabled>Primary Disabled</Button>
+    <br/>
+
+    ```tsx
+    <Button btnType="primary" disabled>
+        Primary Disabled
+    </Button>
+    ```
+    2. Secondary
+    <Button btnType="secondary" disabled>Secondary Disabled</Button>
+    <br/>
+
+    ```tsx
+    <Button btnType="secondary" disabled>
+        Secondary Disabled
+    </Button>
+    ```
+
+    3. Link
+    <Button btnType="link" disabled>Link Disabled</Button>
+    <br/>
+
+    ```tsx
+    <Button btnType="link" disabled>
+        Disabled
+    </Button>
+    ```
+
+<br/>
+
+### Button Color on every type
+
+Example of every button types of BNCC Button can be colorized, which are:
+used:
+```tsx
+btnColor="[your color]"
+```
+
+- Primary Button, Secondary Button, Link Button <span style={{color: 'red', fontWeight: 800}}>(Red)</span>
+
+   <div style={{ display: "flex", gap: "1rem" }}>
+        <Button btnType="primary" btnColor="red">
+            Primary
+        </Button>
+        <Button btnType="secondary" btnColor="red">
+            Secondary
+        </Button>
+        <Button btnType="link" btnColor="red">
+            Link
+        </Button>
+    </div>
+
+```tsx
+<Button btnType="primary" btnColor="red">
+    Primary
+</Button>
+```
+```tsx
+<Button btnType="secondary" btnColor="red">
+    Secondary
+</Button>
+```
+```tsx
+<Button btnType="link" btnColor="red">
+    Link
+</Button>
+```
+
+<br/>
+
+### How Button Link works?
+
+<span style={{fontWeight: 'bold'}}>a. if u want to redirect link to another page in different domain by using:</span>
+
+from react u can redirect link to another page domain by using:
+
+<Button btnType="link" link="https://www.youtube.com/">
+    <p style={{color:'red'}}>Click Here To redirect to a youtube</p>
+</Button>
+
+```tsx
+<Button btnType="link" link="https://www.youtube.com/">Link</Button>
+```
+
+<br/>
+
+import { Configuration } from '../../configuration/Configuration.mdx';
+<span style={{fontWeight: 'bold'}}>b. if u want to redirect link to another page in same domain <span  style={{color: 'red'}}>without reloading</span> by using:</span>
+
+from react u can redirect link to another page in same domain, like this one:
+
+<Button btnType="link" link="/docs/configuration/#commands" element={<Configuration/>}>
+    <p style={{color:'red'}}>Click here to redirect to configuration</p>
+</Button>
+
+```tsx
+// import element u want to redirect
+import { Configuration } from '../../configuration/Configuration.mdx';
+
+<Button btnType="link" link="/docs/configuration/#commands" element={<Configuration/>}>
+    Link
+</Button>
+```
+
+<br/>
+
+### Summary
+
+Well done! You've learned about your button component, and how to use it with any configuration.
